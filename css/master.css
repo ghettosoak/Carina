@@ -1,0 +1,68 @@
+/*
+looking for these? :)
+
+border-radius: 9px;
+
+<?php include("inc/head.html"); ?>
+*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a img {
+  border: none; }
+
+a {
+  border: none;
+  text-decoration: none; }
+
+::selection {
+  /*background: #;*/ }
+
+::-moz-selection {
+  /*background: #;*/ }
+
+.master {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 18px;
+  font-size: 14px; }
+
+.top, .middle, .bottom {
+  position: relative;
+  width: 100%;
+  float: left; }
+  .top .put, .middle .put, .bottom .put {
+    margin: auto;
+    width: 1024px;
+    height: 100%;
+    position: relative; }
+
+.top {
+  height: 125px;
+  position: fixed;
+  width: 100%;
+  background-image: url(../img/texturetastic_gray.png);
+  z-index: 10; }
+
+.middle .top_spacer {
+  height: 125px;
+  width: 100%; }
+.middle .slide {
+  background-attachment: fixed;
+  width: 100%;
+  position: relative;
+  padding: 140px 0;
+  background-image: url("../img/footprints.png");
+  background-color: #f68f67; }
+.middle #slide01 {
+  border-bottom: 16px blue solid; }
+.middle #slide02 {
+  border-bottom: 16px red solid; }
+
+@-moz-document url-prefix() {}

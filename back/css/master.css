@@ -1,0 +1,179 @@
+/*
+looking for these? :)
+
+border-radius: 9px;
+
+<?php include("inc/head.html"); ?>
+*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: georgia; }
+
+a img {
+  border: none; }
+
+a {
+  border: none;
+  text-decoration: none; }
+
+::selection {
+  /*background: #;*/ }
+
+::-moz-selection {
+  /*background: #;*/ }
+
+.master {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  font-family: helvetica, arial, sans-serif;
+  color: #444;
+  line-height: 18px;
+  font-size: 14px; }
+
+.put {
+  margin: auto;
+  width: 1024px;
+  height: 100%;
+  position: relative; }
+
+.selected {
+  background-color: #444;
+  color: white; }
+
+.head, .body {
+  position: relative;
+  float: left; }
+
+.head {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px #ccc solid; }
+  .head div {
+    position: relative;
+    float: left;
+    margin: 0px;
+    display: table;
+    width: 50%;
+    height: 100%; }
+    .head div p {
+      display: table-cell;
+      vertical-align: middle; }
+  .head #title {
+    padding: 0px 20px; }
+  .head #save {
+    padding: 0px 10px;
+    cursor: pointer; }
+
+.body {
+  width: 100%; }
+  .body .category, .body .project, .body .detail {
+    position: relative;
+    height: 100%;
+    float: left;
+    overflow: scroll; }
+  .body .hiding {
+    display: none; }
+  .body .category, .body .project {
+    width: 25%;
+    border-right: 1px #ccc solid; }
+    .body .category > div, .body .project > div {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 50px;
+      display: table;
+      padding: 0px 20px;
+      cursor: pointer; }
+      .body .category > div p, .body .project > div p {
+        margin: auto;
+        display: table-cell;
+        vertical-align: middle; }
+      .body .category > div .cv, .body .category > div .coverimg, .body .project > div .cv, .body .project > div .coverimg {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 10px;
+        background-color: lightgreen; }
+      .body .category > div .cv, .body .project > div .cv {
+        right: 50px; }
+      .body .category > div .coverimg, .body .project > div .coverimg {
+        right: 10px; }
+  .body .project div .proj_kill {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 15px;
+    top: 12.5px;
+    display: none; }
+  .body .project div:hover .proj_kill {
+    display: block; }
+  .body .detail, .body .other {
+    width: 50%;
+    position: relative;
+    float: left;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; }
+    .body .detail p, .body .other p {
+      padding: 0px 10px;
+      margin: 0px;
+      font-size: 11px;
+      width: 100%;
+      float: left; }
+    .body .detail input, .body .detail textarea, .body .detail > div, .body .other input, .body .other textarea, .body .other > div {
+      position: relative;
+      float: left;
+      width: 95%;
+      margin: 5px 5px 15px 5px;
+      padding: 5px;
+      border-top: 1px #ccc solid;
+      border-right: none;
+      border-bottom: none;
+      border-left: 1px #ccc solid;
+      font-size: 14px; }
+      .body .detail input:focus, .body .detail textarea:focus, .body .detail > div:focus, .body .other input:focus, .body .other textarea:focus, .body .other > div:focus {
+        outline: none !important; }
+    .body .detail textarea, .body .other textarea {
+      resize: vertical;
+      height: 5em; }
+    .body .detail > div, .body .other > div {
+      min-height: 200px; }
+      .body .detail > div div, .body .other > div div {
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin: 0px 5px 5px 0px;
+        background-size: cover; }
+        .body .detail > div div .img_kill, .body .detail > div div .file_kill, .body .other > div div .img_kill, .body .other > div div .file_kill {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          top: 0px;
+          left: 0px;
+          z-index: 1000;
+          display: none;
+          cursor: pointer; }
+        .body .detail > div div:hover .img_kill, .body .detail > div div:hover .file_kill, .body .other > div div:hover .img_kill, .body .other > div div:hover .file_kill {
+          display: block; }
+    .body .detail.active, .body .other.active {
+      opacity: 1; }
+  .body .other {
+    position: absolute;
+    width: 75%;
+    right: 0px;
+    background-color: white; }
+    .body .other > div {
+      border: 0px;
+      margin: 0px;
+      padding: 0px; }
+
+@-moz-document url-prefix() {}

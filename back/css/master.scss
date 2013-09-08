@@ -1,0 +1,232 @@
+/*
+looking for these? :)
+
+border-radius: 9px;
+
+<?php include("inc/head.html"); ?>
+*/
+
+//DEFINES
+$masterwidth: 1024px;
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+
+	font-family:georgia;
+}
+
+a img{border:none;}
+a{
+	border:none;
+	text-decoration: none;
+}
+
+::selection {
+	/*background: #;*/
+}
+
+::-moz-selection {
+	/*background: #;*/
+}
+
+.master{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0px;
+	left:0px;
+	font-family:helvetica, arial, sans-serif;
+	color:#444;
+	line-height:18px;
+	font-size:14px;
+}
+
+.put{
+	margin:auto;
+	width:$masterwidth;
+	height:100%;
+	position:relative;
+}
+
+.selected{
+	background-color:#444;
+	color:white;
+}
+
+.head, .body{
+	position:relative;
+	float:left;
+}
+
+.head{
+	width:100%;
+	height:50px;
+	border-bottom:1px #ccc solid;
+
+	div{
+		position:relative;
+		float:left;
+		margin:0px;
+		display:table;
+		width:50%;
+		height:100%;
+		p{
+			display:table-cell;
+			vertical-align:middle;
+		}
+	}
+	#title{padding:0px 20px;}
+	#save{
+		padding:0px 10px;
+		cursor:pointer;
+	}
+}
+
+.body{
+	width:100%;
+	.category, .project, .detail{
+		position:relative;
+		height:100%;
+		float:left;
+		overflow:scroll;
+	}
+
+	.hiding{display:none;}
+
+	.category, .project{
+		width:25%;
+		border-right:1px #ccc solid;
+		&>div{
+			position:relative;
+			float:left;
+			width:100%;
+			height:50px;
+			display:table;
+			padding:0px 20px;
+			cursor:pointer;
+			p{
+				margin:auto;
+				display:table-cell;
+				vertical-align: middle;
+			}
+			.cv, .coverimg{
+				position:absolute;
+				height:30px;
+				width:30px;
+				top:10px;
+				background-color:lightgreen;
+			}
+			.cv{
+				right:50px;
+			}
+			.coverimg{
+				right:10px;
+			}
+		}
+	}
+	.project{
+		div{
+			.proj_kill{
+				position:absolute;
+				height:25px;
+				width:25px;
+				right:15px;
+				top:12.5px;
+				display:none;
+			}
+			&:hover .proj_kill{display:block;}
+		}
+	}
+
+	.detail, .other{
+		width:50%;
+		position:relative;
+		float:left;
+		opacity:0;
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+		
+		p{
+			padding:0px 10px;
+			margin:0px;
+			font-size:11px;
+			width:100%;
+			float:left;
+		}
+
+		input, textarea, &>div{
+			position:relative;
+			float:left;
+			width:95%;
+			margin:5px 5px 15px 5px;
+			padding:5px;
+			border-top:1px #ccc solid;
+			border-right:none;
+			border-bottom:none;
+			border-left:1px #ccc solid;
+			font-size:14px;
+			&:focus{outline:none !important;}
+		}
+
+		textarea{
+			resize:vertical;
+			height:5em;
+		}
+
+		&>div{
+			min-height:200px;
+			div{
+				position:relative;
+				float:left;
+				width:200px;
+				height:200px;
+				overflow:hidden;
+				margin:0px 5px 5px 0px;
+				background-size:cover;
+				.img_kill, .file_kill{
+					position:absolute;
+					width:50px;
+					height:50px;
+					top:0px;
+					left:0px;
+					z-index:1000;
+					display:none;
+					cursor:pointer;
+				}
+				&:hover .img_kill, &:hover .file_kill{display:block;}
+			}
+		}
+		&.active{opacity:1;}
+	}
+
+	.other{
+		position:absolute;
+		width:75%;
+		right:0px;
+		background-color:white;
+		&>div{
+			border:0px;
+			margin:0px;
+			padding:0px;
+		}
+	}
+}
+
+@media only screen and (device-width: 768px) /*IPAD*/ {}
+
+@media only screen and (max-width: 480px) /*IPHONE*/{}
+
+@-moz-document url-prefix() {}
+
+.ie{}
+
+.ie8{}
+
+.ie7{}
+
+.ie6{}
+

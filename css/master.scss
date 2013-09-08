@@ -1,0 +1,126 @@
+/*
+looking for these? :)
+
+border-radius: 9px;
+
+<?php include("inc/head.html"); ?>
+*/
+
+//IMPORTS
+
+@import "../type/type";
+
+//DEFINES
+
+$masterwidth: 1024px;
+
+$thelightgreen: rgb(13, 126, 141);
+$thedarkgreen: rgb(16, 104, 115);
+
+$thelightmagenta: rgb(192, 37, 116);
+$thedarkmagenta: rgb(115, 11, 64);
+
+$thelightyellow: rgb(236, 203, 36);
+$thedarkyellow: rgb(203, 186, 59);
+
+//lightgre
+//darkmag
+//lightmag
+//darkgre
+//darkyell
+//lightyell
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+a img{border:none;}
+a{
+	border:none;
+	text-decoration: none;
+}
+
+::selection {
+	/*background: #;*/
+}
+
+::-moz-selection {
+	/*background: #;*/
+}
+
+.master{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0px;
+	left:0px;
+	font-family:helvetica, arial, sans-serif;
+	line-height:18px;
+	font-size:14px;
+}
+
+.top, .middle, .bottom{
+	position:relative;
+	width:100%;
+	float:left;
+	.put{
+		margin:auto;
+		width:$masterwidth;
+		height:100%;
+		position:relative;
+	}
+}
+
+.top{
+	height:125px;
+	position:fixed;
+	width:100%;
+	background-image:url(../img/texturetastic_gray.png);
+	z-index:10;
+	.put{
+
+	}
+}
+
+.middle{
+	.top_spacer{
+		height:125px;
+		width:100%;
+	}
+
+	.slide{
+		background-attachment: fixed;
+		width:100%;
+		position: relative;
+		padding:140px 0;
+
+		background-image:url('../img/footprints.png');
+		background-color:#f68f67;
+		.put{
+			
+		}
+	}
+	#slide01{border-bottom:16px blue solid;}
+	#slide02{border-bottom:16px red solid;}
+}
+
+.bottom{
+
+}
+
+@media only screen and (device-width: 768px) /*IPAD*/ {}
+
+@media only screen and (max-width: 480px) /*IPHONE*/{}
+
+@-moz-document url-prefix() {}
+
+.ie{}
+
+.ie8{}
+
+.ie7{}
+
+.ie6{}
+
