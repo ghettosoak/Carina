@@ -77,7 +77,7 @@ a {
     float: left;
     overflow: scroll; }
   .body .hiding {
-    display: none; }
+    display: none !important; }
   .body .category, .body .project {
     width: 25%;
     border-right: 1px #ccc solid; }
@@ -98,11 +98,14 @@ a {
         height: 30px;
         width: 30px;
         top: 10px;
-        background-color: lightgreen; }
+        background-position: center center;
+        background-size: cover; }
       .body .category > div .cv, .body .project > div .cv {
-        right: 50px; }
+        right: 50px;
+        background-image: url(../img/cv.png); }
       .body .category > div .coverimg, .body .project > div .coverimg {
-        right: 10px; }
+        right: 10px;
+        background-image: url(../img/cover.png); }
   .body .project div .proj_kill {
     position: absolute;
     height: 25px;
@@ -171,9 +174,23 @@ a {
     width: 75%;
     right: 0px;
     background-color: white; }
-    .body .other > div {
+    .body .other .her, .body .other .cover {
       border: 0px;
       margin: 0px;
       padding: 0px; }
+    .body .other .cover #drop {
+      border: 1px #ccc solid;
+      margin-left: 5px; }
+      .body .other .cover #drop p {
+        font-size: 80px;
+        position: absolute;
+        text-align: center;
+        margin: 80px 0px !important; }
+    .body .other .cover div {
+      display: table; }
+      .body .other .cover div p {
+        display: table-cell;
+        vertical-align: middle;
+        float: none; }
 
 @-moz-document url-prefix() {}

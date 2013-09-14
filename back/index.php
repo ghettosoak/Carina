@@ -55,15 +55,15 @@
 				<div class="cover hiding">
 					<p class="droptxt_img hiding">image drop</p>
 					<p class="droptxt_file hiding">file drop</p>
-					<div id="drop"></div>
-					<div class="cover_carinacv hiding" data-pointer="1"></div>
-					<div class="cover_carina hiding" data-pointer="2"></div>
-					<div class="cover_my_proj hiding" data-pointer="3"></div>
-					<div class="cover_posters hiding" data-pointer="4"></div>
-					<div class="cover_logos hiding" data-pointer="5"></div>
-					<div class="cover_corporate_pub hiding" data-pointer="6"></div>
-					<div class="cover_signage hiding" data-pointer="7"></div>
-					<div class="cover_websites hiding" data-pointer="8"></div>
+					<div id="drop"><p>+</p></div>
+					<div class="hiding cover_carinacv" data-pointer="1"></div>
+					<div class="hiding cover_carina" data-pointer="2"></div>
+					<div class="hiding cover_my_proj" data-pointer="3"></div>
+					<div class="hiding cover_posters" data-pointer="4"></div>
+					<div class="hiding cover_logos" data-pointer="5"></div>
+					<div class="hiding cover_corporate_pub" data-pointer="6"></div>
+					<div class="hiding cover_signage" data-pointer="7"></div>
+					<div class="hiding cover_websites" data-pointer="8"></div>
 				</div>
 			</div>
 		</div>

@@ -93,7 +93,7 @@ a{
 		overflow:scroll;
 	}
 
-	.hiding{display:none;}
+	.hiding{display:none !important;}
 
 	.category, .project{
 		width:25%;
@@ -116,13 +116,16 @@ a{
 				height:30px;
 				width:30px;
 				top:10px;
-				background-color:lightgreen;
+				background-position:center center;
+				background-size: cover;
 			}
 			.cv{
 				right:50px;
+				background-image:url(../img/cv.png);
 			}
 			.coverimg{
 				right:10px;
+				background-image:url(../img/cover.png);
 			}
 		}
 	}
@@ -208,10 +211,33 @@ a{
 		width:75%;
 		right:0px;
 		background-color:white;
-		&>div{
+		.her, .cover{
 			border:0px;
 			margin:0px;
 			padding:0px;
+		}
+		.her{
+
+		}
+		.cover{
+			#drop{
+				border:1px #ccc solid;
+				margin-left:5px;
+				p{
+					font-size:80px;
+					position:absolute;
+					text-align:center;
+					margin:80px 0px !important;
+				}
+			}
+			div{
+				display:table;
+				p{
+					display:table-cell;
+					vertical-align: middle;
+					float:none;
+				}
+			}
 		}
 	}
 }

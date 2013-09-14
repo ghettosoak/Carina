@@ -42,10 +42,9 @@ function cover_pull(){
 		url: "php/getcovers.php"
 	}).done( function(cover){
 		$.each(cover, function(i, v){
-			console.log(i)
 			console.log(v)
-			if ((i) == 0) $other.find('div[data-pointer="'+(i+1)+'"]').append('<div class="thecv"><p>'+v+'</p></div>')
-			else $other.find('div[data-pointer="'+(i+1)+'"]').append('<img src="../'+v+'" />')
+			if ((i) == 0) $other.find('div[data-pointer="'+(i+1)+'"]').append('<p>'+v+'</p>')
+			else $other.find('div[data-pointer="'+(i+1)+'"]').css('background-image', 'url(../'+v+')')//.append('<img src="../'+v+'" />')
 
 			if (i == $category.children('div').size()) cat_select();
 		})
@@ -112,24 +111,15 @@ function cat_select(){
 
 		covering = $that.data('pointer')
 
-		$other.find('div[data-pointer="'+covering+'"]')
-		.removeClass('hiding')
-		.siblings().addClass('hiding')
-
-		console.log($other.find('div[data-pointer="'+covering+'"]'))
+		$other.find('div[data-pointer="'+covering+'"]').removeClass('hiding')
+		.siblings().not('p, #drop').addClass('hiding')
 
 		if ($that.hasClass('coverimg')){
-
 			$('.droptxt_img').removeClass('hiding')
-			.siblings().addClass('hiding')
-			.parent().addClass('drop_img') 
-
+			.siblings('p').addClass('hiding')
 		}else if ($that.hasClass('cv')){
-
 			$('.droptxt_file').removeClass('hiding')
-			.siblings().addClass('hiding')
-			.parent().addClass('drop_file')
-
+			.siblings('p').addClass('hiding')
 		}
 	})
 }
@@ -305,43 +295,21 @@ $('#proj_img').filedrop({
 
 $('#drop').filedrop({
 	fallback_id: 'me',
-	paramname:'me_image',
+	paramname:'covered',
 	
-	url: 'php/covers.php',
+	url: 'php/coversave.php',
 	maxfilesize: 20,
 
-	// data:{ 
-	// 	isimg:
-	// 	proj: nowediting 
-
-	// },
-	
-	uploadFinished:function(i,file,response){
-
-		// $('#meimgs').find('div').last().attr('data-img', response.img_id); 
-
-		// $('.img_kill').css('z-index','1000').on('click', function(){
-		// 	var $waitme = $(this).parent()
-		// 	var $thisone = $waitme.data('img');
-		// 	$.ajax({
-		// 		type: "POST",
-		// 		dataType:'JSON',
-		// 		data:{kill: $thisone},
-		// 		url: "../back/php/killmeimg.php"
-		// 	}).done(function(){
-		// 		$waitme.remove();
-		// 	})
-		// });
-
-		// imgsession.push(response.img_id);
+	data:{
+		cover:covering
 	},
-	
-	error: function(err, file) { alert("it didn't work. here's why, maybe: "+err) },
+		
+	error: function(err, file) { alert("it didn't work. here's why, maybe: "+err+"\ntry it again.") },
 	
 	beforeEach: function(file){
 		console.log(file.type)
-		if(!file.type.match(/^image\/jpeg/)){
-			alert('jpegs only kthx');
+		if(!file.type.match(/^image\/jpeg/) && !file.type.match(/^application\/pdf/) ){
+			alert('jpegs & PDFs only kthx');
 			return false;
 		}
 	},
@@ -349,13 +317,10 @@ $('#drop').filedrop({
 	uploadStarted:function(i, file, len){
 		var preview = $('<div></div>')
 		var reader = new FileReader();
-		
-		reader.onload = function(e){ preview.css('background-image','url('+e.target.result+')'); };
+		reader.onload = function(e){ $other.find('div[data-pointer="'+covering+'"]').css('background-image','url('+e.target.result+')'); };
 		reader.readAsDataURL(file);
-		preview.appendTo('#proj_img');
-		preview.append('<img src="../back/img/kill.png" class="img_kill" />')
 		$.data(file,preview);			
-	}	 
+	}
 });
 
 
