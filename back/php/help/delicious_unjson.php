@@ -66,7 +66,7 @@ function proper_array_diff($a, $b) {
 }
 
 mysql_connect("localhost", "root", "root");
-mysql_select_db("in.ject");
+mysql_select_db("carina");
 
 
 ?>

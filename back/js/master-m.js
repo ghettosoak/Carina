@@ -1174,13 +1174,15 @@ $('#drop').filedrop({
 	maxfilesize: 20,
 
 	data:{
-		cover:covering
+		cover: function(){
+			return covering;
+		}
 	},
 		
 	error: function(err, file) { alert("it didn't work. here's why, maybe: "+err+"\ntry it again.") },
 	
 	beforeEach: function(file){
-		console.log(file.type)
+		console.log(covering)
 		if(!file.type.match(/^image\/jpeg/) && !file.type.match(/^application\/pdf/) ){
 			alert('jpegs & PDFs only kthx');
 			return false;
@@ -1190,9 +1192,20 @@ $('#drop').filedrop({
 	uploadStarted:function(i, file, len){
 		var preview = $('<div></div>')
 		var reader = new FileReader();
-		reader.onload = function(e){ $other.find('div[data-pointer="'+covering+'"]').css('background-image','url('+e.target.result+')'); };
-		reader.readAsDataURL(file);
-		$.data(file,preview);			
+
+		if (covering == 1){
+			console.log(file)
+			// reader.onload = function(e){ 
+				$other.find('div[data-pointer="'+covering+'"] p').html('store/cover/'+file.name); 
+				// console.log('yeah!')
+			// };
+			// reader.readAsDataURL(file);
+			// $.data(file,preview);				
+		}else{
+			reader.onload = function(e){ $other.find('div[data-pointer="'+covering+'"]').css('background-image','url('+e.target.result+')'); };
+			reader.readAsDataURL(file);
+			$.data(file,preview);				
+		}
 	}
 });
 
