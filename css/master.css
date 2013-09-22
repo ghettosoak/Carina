@@ -61,8 +61,16 @@ a {
   background-image: url("../img/footprints.png");
   background-color: #f68f67; }
 .middle #slide01 {
-  border-bottom: 16px blue solid; }
+  border-bottom: 16px #0d7e8d solid; }
 .middle #slide02 {
-  border-bottom: 16px red solid; }
+  border-bottom: 16px #730b40 solid; }
+.middle #slide03 {
+  border-bottom: 16px #c02574 solid; }
+.middle #slide04 {
+  border-bottom: 16px #106873 solid; }
+.middle #slide05 {
+  border-bottom: 16px #cbba3b solid; }
+.middle #slide06 {
+  border-bottom: 16px #eccb24 solid; }
 
 @-moz-document url-prefix() {}

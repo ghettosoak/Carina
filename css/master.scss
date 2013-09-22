@@ -102,8 +102,12 @@ a{
 			
 		}
 	}
-	#slide01{border-bottom:16px blue solid;}
-	#slide02{border-bottom:16px red solid;}
+	#slide01{border-bottom:16px $thelightgreen solid;}
+	#slide02{border-bottom:16px $thedarkmagenta solid;}
+	#slide03{border-bottom:16px $thelightmagenta solid;}
+	#slide04{border-bottom:16px $thedarkgreen solid;}
+	#slide05{border-bottom:16px $thedarkyellow solid;}
+	#slide06{border-bottom:16px $thelightyellow solid;}
 }
 
 .bottom{

@@ -1193,15 +1193,8 @@ $('#drop').filedrop({
 		var preview = $('<div></div>')
 		var reader = new FileReader();
 
-		if (covering == 1){
-			console.log(file)
-			// reader.onload = function(e){ 
-				$other.find('div[data-pointer="'+covering+'"] p').html('store/cover/'+file.name); 
-				// console.log('yeah!')
-			// };
-			// reader.readAsDataURL(file);
-			// $.data(file,preview);				
-		}else{
+		if (covering == 1) $other.find('div[data-pointer="'+covering+'"] p').html('store/cover/'+file.name); 		
+		else{
 			reader.onload = function(e){ $other.find('div[data-pointer="'+covering+'"]').css('background-image','url('+e.target.result+')'); };
 			reader.readAsDataURL(file);
 			$.data(file,preview);				

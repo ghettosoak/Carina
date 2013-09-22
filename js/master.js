@@ -15,5 +15,15 @@ $(document).ready(function(){
 		$(this).css('height', $windowpane.height()-125)
 	})
 
+	$.ajax({
+		type: "POST",
+		dataType:'JSON',
+		url: "php/getcovers.php"
+	}).done( function(cover){
+		$.each(cover, function(i, v){
+			
+		})
+	})
+
 	
 })

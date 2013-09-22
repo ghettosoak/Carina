@@ -23,8 +23,8 @@
 			<div class="slide" id="slide01" data-stellar-background-ratio="0.5">
 				<div class="put">
 					<div>
-						<h1>Parallax Scrolling</h1>
-						<h2>What you've seen its called parallax scrolling</h2>
+						<h1>My Projects</h1>
+						<h2>This is some text about my projects.</h2>
 					</div>
 				</div>
 			</div>
@@ -32,8 +32,8 @@
 			<div class="slide" id="slide02" data-stellar-background-ratio="0.5">
 				<div class="put">
 					<div>
-						<h1>Parallax Scrolling</h1>
-						<h2>What you've seen its called parallax scrolling</h2>
+						<h1>Posters</h1>
+						<h2>This is some text about posters.</h2>
 					</div>
 				</div>
 			</div>
@@ -41,8 +41,8 @@
 			<div class="slide" id="slide03" data-stellar-background-ratio="0.5">
 				<div class="put">
 					<div>
-						<h1>Parallax Scrolling</h1>
-						<h2>What you've seen its called parallax scrolling</h2>
+						<h1>Logos</h1>
+						<h2>This is some text about logos.</h2>
 					</div>
 				</div>
 			</div>
@@ -50,8 +50,26 @@
 			<div class="slide" id="slide04" data-stellar-background-ratio="0.5">
 				<div class="put">
 					<div>
-						<h1>Parallax Scrolling</h1>
-						<h2>What you've seen its called parallax scrolling</h2>
+						<h1>Corporate Publication</h1>
+						<h2>This is some text about corporate publication.</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide" id="slide05" data-stellar-background-ratio="0.5">
+				<div class="put">
+					<div>
+						<h1>Signage</h1>
+						<h2>This is some text about signage.</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide" id="slide06" data-stellar-background-ratio="0.5">
+				<div class="put">
+					<div>
+						<h1>Websites</h1>
+						<h2>This is some text about websites.</h2>
 					</div>
 				</div>
 			</div>
