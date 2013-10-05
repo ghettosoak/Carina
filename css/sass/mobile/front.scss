@@ -1,0 +1,85 @@
+#front{
+	position:relative;
+	float:left;
+	overflow:scroll;
+
+	.top_spacer{
+		height:125px;
+		width:100%;
+	}
+
+	&>div:not(.top_spacer){
+		width:100%;
+		position: relative;
+		padding:140px 0;
+		overflow:hidden;
+		.back{
+			height:150%;
+			width:100%;
+			position:absolute;
+			top:-25%;
+			left:0px;
+			background-position:center center;
+			background-size:cover;
+		}
+		.put{
+			margin:auto;
+			max-width:$masterwidth;
+			height:100%;
+			position:relative;
+			p{
+				position:absolute;
+				left:60%;
+				padding:30px;
+				font-size:24px;
+				cursor: pointer;
+				span{
+					color:white;
+					@include stix;
+				}
+			}
+		}
+		.sec_color{
+			height:16px;
+			width:100%;
+			position:absolute;
+			top:0px;
+			z-index:10;
+		}
+		&#sec01{
+			z-index:1; 
+			color:$thelightgreen;
+			.sec_color{background-color:$thelightgreen;}
+		}
+		&#sec02{
+			z-index:2; 
+			color:$thedarkmagenta;
+			.sec_color{background-color:$thedarkmagenta;}
+		}
+		&#sec03{
+			z-index:3; 
+			color:$thelightmagenta;
+			.sec_color{background-color:$thelightmagenta;}
+		}
+		&#sec04{
+			z-index:4; 
+			color:$thedarkgreen;
+			.sec_color{background-color:$thedarkgreen;}
+		}
+		&#sec05{
+			z-index:5; 
+			color:$thedarkyellow;
+			.sec_color{background-color:$thedarkyellow;}
+		}
+		&#sec06{
+			z-index:6; 
+			color:$thelightyellow;
+			.sec_color{background-color:$thelightyellow;}
+		}
+
+		&.here .sec_color{
+			position:fixed;
+			top:125px;
+		}
+	}	
+}

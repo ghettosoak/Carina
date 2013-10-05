@@ -6,7 +6,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Page Title</title>
+    <title>Carina Stucki Data Swallow</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="type/type.css"/>
     <link rel="stylesheet" type="text/css" href="css/master.css" />

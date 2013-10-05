@@ -1,0 +1,26 @@
+// COLOUR
+$thelightgreen: rgb(13, 126, 141);
+$thedarkgreen: rgb(16, 104, 115);
+
+$thelightmagenta: rgb(192, 37, 116);
+$thedarkmagenta: rgb(115, 11, 64);
+
+$thelightyellow: rgb(236, 203, 36);
+$thedarkyellow: rgb(203, 186, 59);
+
+//lightgre
+//darkmag
+//lightmag
+//darkgre
+//darkyell
+//lightyell
+
+// DEFINITIONS
+
+$masterwidth: 1024px;
+
+@mixin prfl{
+	position:relative;
+	float:left;
+}
+

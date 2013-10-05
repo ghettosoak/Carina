@@ -1,0 +1,13 @@
+.top{
+	height:125px;
+	position:fixed;
+	width:100%;
+	background-image:url(../img/texturetastic_gray.png);
+	z-index:100;
+	.put{
+		margin:auto;
+		max-width:$masterwidth;
+		height:100%;
+		position:relative;
+	}
+}

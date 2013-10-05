@@ -1,14 +1,21 @@
-/*
-looking for these? :)
+@font-face {
+  font-family: 'u57';
+  src: url("../type/u57/UniversLTStd-Cn.eot");
+  src: local("☺"), url("../type/u57/UniversLTStd-Cn.woff") format("woff"), url("../type/u57/UniversLTStd-Cn.ttf") format("truetype"), url("../type/u57/UniversLTStd-Cn.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-border-radius: 9px;
+@font-face {
+  font-family: 'stix';
+  src: url("../type/stix/STIXGeneralItalic.eot");
+  src: local("☺"), url("../type/stix/STIXGeneralItalic.woff") format("woff"), url("../type/stix/STIXGeneralItalic.ttf") format("truetype"), url("../type/stix/STIXGeneralItalic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-<?php include("inc/head.html"); ?>
-*/
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+html {
+  font-family: u57;
+  font-size: 20px;
+  line-height: 24px; }
 
 a img {
   border: none; }
@@ -17,11 +24,40 @@ a {
   border: none;
   text-decoration: none; }
 
+p {
+  margin: 0px 0px 10px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em; }
+
+h1, .h1 {
+  font-size: 2.60rem; }
+
+h2, .h2 {
+  font-size: 2.15rem; }
+
+h3, .h3 {
+  font-size: 1.70rem; }
+
+h4, .h4 {
+  font-size: 1.25rem; }
+
+h5, .h5 {
+  font-size: 1rem; }
+
+h6, .h6 {
+  font-size: 0.85rem; }
+
 ::selection {
   /*background: #;*/ }
 
 ::-moz-selection {
   /*background: #;*/ }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .master {
   position: absolute;
@@ -29,48 +65,108 @@ a {
   width: 100%;
   top: 0px;
   left: 0px;
-  font-family: helvetica, arial, sans-serif;
-  line-height: 18px;
-  font-size: 14px; }
+  overflow-x: hidden; }
 
-.top, .middle, .bottom {
-  position: relative;
-  width: 100%;
-  float: left; }
-  .top .put, .middle .put, .bottom .put {
-    margin: auto;
-    width: 1024px;
+.carousel {
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .carousel > div {
     height: 100%;
-    position: relative; }
+    width: 33.33333333%;
+    position: relative;
+    float: left; }
 
 .top {
   height: 125px;
   position: fixed;
   width: 100%;
   background-image: url(../img/texturetastic_gray.png);
-  z-index: 10; }
+  z-index: 100; }
+  .top .put {
+    margin: auto;
+    max-width: 1024px;
+    height: 100%;
+    position: relative; }
 
-.middle .top_spacer {
-  height: 125px;
-  width: 100%; }
-.middle .slide {
-  background-attachment: fixed;
-  width: 100%;
+#front {
   position: relative;
-  padding: 140px 0;
-  background-image: url("../img/footprints.png");
-  background-color: #f68f67; }
-.middle #slide01 {
-  border-bottom: 16px #0d7e8d solid; }
-.middle #slide02 {
-  border-bottom: 16px #730b40 solid; }
-.middle #slide03 {
-  border-bottom: 16px #c02574 solid; }
-.middle #slide04 {
-  border-bottom: 16px #106873 solid; }
-.middle #slide05 {
-  border-bottom: 16px #cbba3b solid; }
-.middle #slide06 {
-  border-bottom: 16px #eccb24 solid; }
+  float: left;
+  overflow: scroll; }
+  #front .top_spacer {
+    height: 125px;
+    width: 100%; }
+  #front > div:not(.top_spacer) {
+    width: 100%;
+    position: relative;
+    padding: 140px 0;
+    overflow: hidden; }
+    #front > div:not(.top_spacer) .back {
+      height: 150%;
+      width: 100%;
+      position: absolute;
+      top: -25%;
+      left: 0px;
+      background-position: center center;
+      background-size: cover; }
+    #front > div:not(.top_spacer) .put {
+      margin: auto;
+      max-width: 1024px;
+      height: 100%;
+      position: relative; }
+      #front > div:not(.top_spacer) .put p {
+        position: absolute;
+        left: 60%;
+        padding: 30px;
+        font-size: 24px;
+        cursor: pointer; }
+        #front > div:not(.top_spacer) .put p span {
+          color: white;
+          font-family: stix; }
+    #front > div:not(.top_spacer) .sec_color {
+      height: 16px;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      z-index: 10; }
+    #front > div:not(.top_spacer)#sec01 {
+      z-index: 1;
+      color: #0d7e8d; }
+      #front > div:not(.top_spacer)#sec01 .sec_color {
+        background-color: #0d7e8d; }
+    #front > div:not(.top_spacer)#sec02 {
+      z-index: 2;
+      color: #730b40; }
+      #front > div:not(.top_spacer)#sec02 .sec_color {
+        background-color: #730b40; }
+    #front > div:not(.top_spacer)#sec03 {
+      z-index: 3;
+      color: #c02574; }
+      #front > div:not(.top_spacer)#sec03 .sec_color {
+        background-color: #c02574; }
+    #front > div:not(.top_spacer)#sec04 {
+      z-index: 4;
+      color: #106873; }
+      #front > div:not(.top_spacer)#sec04 .sec_color {
+        background-color: #106873; }
+    #front > div:not(.top_spacer)#sec05 {
+      z-index: 5;
+      color: #cbba3b; }
+      #front > div:not(.top_spacer)#sec05 .sec_color {
+        background-color: #cbba3b; }
+    #front > div:not(.top_spacer)#sec06 {
+      z-index: 6;
+      color: #eccb24; }
+      #front > div:not(.top_spacer)#sec06 .sec_color {
+        background-color: #eccb24; }
+    #front > div:not(.top_spacer).here .sec_color {
+      position: fixed;
+      top: 125px; }
 
 @-moz-document url-prefix() {}

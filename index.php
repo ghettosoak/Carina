@@ -6,7 +6,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Page Title</title>
+    <title>Carina Stucki</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/master.css" />
 </head>
@@ -17,68 +17,64 @@
 			<div class="put">
 				
 			</div>
+			<div id="color"></div>
 		</div>
-		<div class="middle">
-			<div class="top_spacer"></div>
-			<div class="slide" id="slide01" data-stellar-background-ratio="0.5">
-				<div class="put">
-					<div>
-						<h1>My Projects</h1>
-						<h2>This is some text about my projects.</h2>
+		<div class="carousel">
+			<div id="front">
+				<div class="top_spacer"></div>
+				<div id="sec01">
+					<div id="slide01" class="back"></div>
+					<div class="put">
+						<p>»See more <span>My Projects</span></p>
 					</div>
 				</div>
-			</div>
 
-			<div class="slide" id="slide02" data-stellar-background-ratio="0.5">
-				<div class="put">
-					<div>
-						<h1>Posters</h1>
-						<h2>This is some text about posters.</h2>
+				<div id="sec02">
+					<div id="slide02" class="back"></div>
+					<div class="put">
+						<p>»See more <span>Posters</span></p>
 					</div>
+					<div class="sec_color"></div>
 				</div>
-			</div>
 
-			<div class="slide" id="slide03" data-stellar-background-ratio="0.5">
-				<div class="put">
-					<div>
-						<h1>Logos</h1>
-						<h2>This is some text about logos.</h2>
+				<div id="sec03">
+					<div id="slide03" class="back"></div>
+					<div class="put">
+						<p>»See more <span>Logos</span></p>
 					</div>
+					<div class="sec_color"></div>
 				</div>
-			</div>
 
-			<div class="slide" id="slide04" data-stellar-background-ratio="0.5">
-				<div class="put">
-					<div>
-						<h1>Corporate Publication</h1>
-						<h2>This is some text about corporate publication.</h2>
+				<div id="sec04">
+					<div id="slide04" class="back"></div>
+					<div class="put">
+						<p>»See more <span>Corporate Publication</span></p>
 					</div>
+					<div class="sec_color"></div>
 				</div>
-			</div>
 
-			<div class="slide" id="slide05" data-stellar-background-ratio="0.5">
-				<div class="put">
-					<div>
-						<h1>Signage</h1>
-						<h2>This is some text about signage.</h2>
+				<div id="sec05">
+					<div id="slide05" class="back"></div>
+					<div class="put">
+						<p>»See more <span>Signage</span></p>
 					</div>
+					<div class="sec_color"></div>
 				</div>
-			</div>
 
-			<div class="slide" id="slide06" data-stellar-background-ratio="0.5">
-				<div class="put">
-					<div>
-						<h1>Websites</h1>
-						<h2>This is some text about websites.</h2>
+				<div id="sec06">
+					<div id="slide06" class="back"></div>
+					<div class="put">
+						<p>»See more <span>Websites</span></p>
 					</div>
+					<div class="sec_color"></div>
 				</div>
 			</div>
-		</div>
-		<div class="bottom">
-			<div class="put">
-				
+			<div class="grid">
+			</div>  
+			<div class="project">
 			</div>
 		</div>
+		
 	</div>
 <script type="text/javascript" src="js/master-m.js"></script>
 </body>

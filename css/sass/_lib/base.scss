@@ -1,0 +1,39 @@
+::selection {
+	/*background: #;*/
+}
+
+::-moz-selection {
+	/*background: #;*/
+}
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+.master{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0px;
+	left:0px;
+	overflow-x:hidden;
+}
+
+.carousel{
+	width:300%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	&>div{
+		height:100%;
+		width:33.33333333%;
+		@include prfl;
+	}
+}
