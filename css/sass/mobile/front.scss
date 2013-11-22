@@ -1,13 +1,4 @@
 #front{
-	position:relative;
-	float:left;
-	overflow:scroll;
-
-	.top_spacer{
-		height:125px;
-		width:100%;
-	}
-
 	&>div:not(.top_spacer){
 		width:100%;
 		position: relative;
@@ -24,7 +15,7 @@
 		}
 		.put{
 			margin:auto;
-			max-width:$masterwidth;
+			max-width:$masterwidth; 
 			height:100%;
 			position:relative;
 			p{

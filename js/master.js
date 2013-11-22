@@ -1,4 +1,4 @@
-(function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
+-(function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
 (function(){try{console.log();return window.console;}catch(a){return (window.console={});}}());
 
 //jquery v1.8.0 is included in this mess. Copyright 2012 jQuery Foundation and other contributors.
@@ -11,22 +11,61 @@ var sectionHeight;
 var depth = 0, panel = 0, panelreg = 0, position = 0;
 var large;
 var $front = $('#front');
-var $grid = $('#grid')
+var $grid = $('#grid');
+var $project = $('#project');
+var $carousel = $('#carousel')
+var hash;
+var hashhistory = [];
 
 $(document).ready(function(){
+
+	$windowPane.resize(projectReprepare);
+
 	paneHeight = $windowPane.height();
 	paneWidth = $windowPane.width();
 
 	sectionHeight = paneHeight-125;
-
 	$theSections = $front.children('div').not('.top_spacer')
 
 	$theSections.each(function(){
-		var $that = $(this)
-		$that.css('height', sectionHeight)
+		$(this).css('height', sectionHeight)
 		.find('p').css('top', randomInt(0, sectionHeight-200))
 	});
 
+	if (window.location.hash){
+		hash = window.location.hash.split('#')[1];
+		console.log(hash)
+		if (hash.indexOf('home') === 0) frontLoader();
+		if (hash.indexOf('category') === 0) gridLoader(hash.split('-')[1]);
+		if (hash.indexOf('project') === 0) projectLoader(hash.split('-')[1]);
+	}else{
+		window.location.hash = 'home'
+	}	
+});
+
+$(document).ajaxComplete(function( event, request, settings ) {
+	$carousel.addClass('ready'); 
+});
+
+
+var projectReprepare = _.debounce(function(){
+	projectPrepare($project);
+	$proj_img_carousel.css('left', -galleryposition*$proj_img_carousel.parent().width())
+},250)
+
+$front.find('p').on('click', function(){
+	window.location.hash = 'category-'+$(this).parent().siblings('.back').data('category');
+})
+
+$windowPane.bind('hashchange', function(){
+	hash = window.location.hash.split('#')[1];
+	if (hash.indexOf('home') === 0) frontLoader();
+	if (hash.indexOf('category') === 0) gridLoader(hash.split('-')[1]);
+	if (hash.indexOf('project') === 0) projectLoader(hash.split('-')[1]);
+	hashhistory.push(hash)
+});
+
+function frontLoader(){
 	$.ajax({
 		type: "POST",
 		dataType:'JSON',
@@ -37,35 +76,81 @@ $(document).ready(function(){
 		});
 	});
 
+	$carousel.removeClass('lookingat_grid lookingat_project').addClass('lookingat_front');
+
 	$front.scroll(function(e){
 		shifter($front.scrollTop());
 	});
-
-	gridLoader('posters')
-});
-
-$front.find('p').on('click', function(){
-	window.location.hash = $(this).parent().siblings('.back').data('category');
-})
-
-$windowPane.bind('hashchange', function(){
-	var hash = (window.location.hash.split('#'));
-	console.log(hash)
-});
+}
 
 function gridLoader(ing){
+	if (hashhistory[hashhistory.length-2] === hash){
+		$carousel.removeClass('lookingat_front lookingat_project').addClass('lookingat_grid');
+	}else{
+		$.ajax({
+			type: "POST",
+			dataType:'JSON',
+			data:{
+				category:ing
+			},
+			url: "php/getgrid.php"
+		}).done( function(tiles){
+			render('tile', tiles, function(returned){
+				$grid.append(returned)
+				.find('.tile').on('click', function(){
+					window.location.hash = 'project-'+$(this).data('pointer');
+				})
+				$carousel.removeClass('lookingat_front lookingat_project').addClass('lookingat_grid');
+			})
+		});
+	}
+}
+
+function projectLoader(ing){
+	galleryposition = 1
 	$.ajax({
 		type: "POST",
 		dataType:'JSON',
-		data:ing,
-		url: "php/getgrid.php"
-	}).done( function(tiles){
-
-		render('grid', tiles, function(returned){
-			$grid.append(returned)			
+		data:{
+			project:ing
+		},
+		url: "php/getproject.php"
+	}).done( function(proj){
+		render('project', proj, function(returned){
+			projectPrepare($project.empty().append(returned))
+			$carousel.removeClass('lookingat_front lookingat_grid').addClass('lookingat_project');
 		})
-
 	});
+}
+
+
+var $proj_img_select;
+var $proj_img_carousel;
+var galleryposition = 1;
+
+function projectPrepare($thisone){
+	var $projimgs;
+
+	$proj_img_carousel = $thisone
+	.find('.proj_img_carousel').css('width', function(){
+		var $that = $(this)
+		$projimgs = $that.find('div')
+		$proj_img_select = $that.parent().siblings('.proj_img_select')
+		return $projimgs.size() * ($that.parent().width())
+	})
+
+	console.log($thisone)
+
+	$projimgs.css('width', $proj_img_carousel.parent().width())
+
+	$proj_img_select.find('p').each(function(e){
+		$(this).html(e+1)
+	})
+
+	$proj_img_select.find('div').off().on('click', function(){
+		galleryposition = $(this).index()
+		$proj_img_carousel.css('left', -galleryposition*$proj_img_carousel.parent().width())
+	})
 }
 
 function shifter(there){

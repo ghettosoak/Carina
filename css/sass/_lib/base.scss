@@ -12,6 +12,11 @@
 	box-sizing: border-box; 
 }
 
+body{
+	margin:0px;
+	background-image:url(../img/texturetastic_gray.png);
+}
+
 .master{
 	position:absolute;
 	height:100%;
@@ -21,21 +26,28 @@
 	overflow-x:hidden;
 }
 
-.carousel{
+#carousel{
 	width:300%;
 	height:100%;
 	position:absolute;
 	left:0px;
-	top:0px;
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	padding-top:125px;
+	&.ready{
+		-webkit-transition: all 1s ease-in-out;
+		-moz-transition: all 1s ease-in-out;
+		-o-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+	}
 	&>div{
 		height:100%;
 		width:33.33333333%;
 		@include prfl;
+		overflow:scroll;
 	}
+
+	&.lookingat_front{left:0px;}
+	&.lookingat_grid{left:-100%;}
+	&.lookingat_project{left:-200%;}
 }
 
 .hiding{display:none;}

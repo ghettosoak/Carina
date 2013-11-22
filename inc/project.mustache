@@ -1,0 +1,15 @@
+{{#project}}
+<div class="proj_img">
+	<div class="proj_img_carousel">
+	{{#img}}
+		<div style="background-image:url({{.}})"></div>
+	{{/img}}
+	</div>
+</div>
+<div class="proj_img_select">
+	{{#img}}<div><p>{{@index}}</p></div>{{/img}}
+</div>
+<p class="client">{{client}}</p>
+<p class="name">{{name}}</p>
+<p class="text">{{text}}</p>
+{{/project}}

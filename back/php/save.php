@@ -30,14 +30,6 @@ mysql_query("update images set tile = 1 where id = ".$tile);
 if ($allprojpromotion == 'true') $allprojpromotion = 1;
 else $allprojpromotion = 0;
 
-// mysql_query('update project set 
-// 	category = "'.$category.'",
-// 	name = "'.$name.'",
-// 	client = "'.$client.'",
-// 	text = "'.$text.'",
-// 	tilepath = "'.$tilepath.'"
-// 	where id = "'.$whichproj.'"');
-
 mysql_query('update project set 
 	category = "'.$category.'",
 	name = "'.$name.'",
@@ -46,8 +38,6 @@ mysql_query('update project set
 	allprojpromoted = "'.$allprojpromotion.'",
  	tilepath = "'.$tilepath.'"
 	where id = "'.$whichproj.'"');
-
-
 
 echo $allprojpromotion;
 

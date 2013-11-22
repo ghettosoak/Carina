@@ -9,7 +9,7 @@ $tiles = array();
 $tiles['tiles'] = array();
 
 while ($thetile = mysql_fetch_array($theprojs)){
-	$tiles['tiles'][] = array("id" => $thetile['id'], "name" => $thetile['name'], "img" => $thetile['tilepath']);
+	$tiles['tiles'][] = array("id" => $thetile['id'], "name" => $thetile['name'], "img" => "store/".$thetile['tilepath']);
 }
 
 echo json_encode($tiles);

@@ -1,0 +1,75 @@
+#project{
+	.proj_img{
+		position:relative;
+		height:500px;
+		width:80%;
+		margin:auto;
+		overflow-x:hidden;
+		.proj_img_carousel{
+			position:absolute;
+			height:100%;
+			left:0px;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+			div{
+				@include prfl;
+				height:100%;
+				display:inline-block;
+				background-size:cover;
+			}
+		}	
+	}
+	.proj_img_select{
+		position:relative;
+		height:6px;
+		width:80%;
+		margin:0px auto 75px;
+		div{
+			width:16.66667%;
+			height:100%;
+			@include prfl;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+			cursor: pointer;
+			p{
+				position:absolute;
+				bottom:-35px;
+				width:100%;
+				text-align: center;
+				font-family: stix;
+				font-size:16px;
+			}
+
+			&:nth-child(1){background-color:$thelightgreen;   color:$thelightgreen;}
+			&:nth-child(2){background-color:$thedarkmagenta;  color:$thedarkmagenta;}
+			&:nth-child(3){background-color:$thelightmagenta; color:$thelightmagenta;}
+			&:nth-child(4){background-color:$thedarkgreen;    color:$thedarkgreen;}
+			&:nth-child(5){background-color:$thedarkyellow;   color:$thedarkyellow;}
+			&:nth-child(6){background-color:$thelightyellow;  color:$thelightyellow;}
+
+			&:hover{
+				height:15px;
+			}
+		}
+	}	
+
+	p{
+		text-align: center;
+	}
+	.client{
+		font-family: stix;
+		font-size:16px;
+		margin-bottom:6px;
+	}
+	.name{
+		font-size:22px;
+		margin-bottom:15px;
+	}
+	.text{
+
+	}
+}

@@ -6,9 +6,9 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-var mustacheCache = {};
+var handlebarsCache = {};
 /**
- * This wraps the mustache rendering in a single function.
+ * This wraps the handlebars rendering in a single function.
  * It will ajax and compile the template (or use locally if available)
  * @param template string template name to load or get from cache
  * @param data render data to use
@@ -16,8 +16,8 @@ var mustacheCache = {};
  */
 var render = function (template, data, callback) {
     // template is in cache
-    if (mustacheCache[template] !== undefined) {
-        callback(mustacheCache[template](data));
+    if (handlebarsCache[template] !== undefined) {
+        callback(handlebarsCache[template](data));
     }
     // We have to load and compile the template first
     else {
@@ -25,9 +25,9 @@ var render = function (template, data, callback) {
             url: 'inc/'+template+'.mustache',
             success: function(rawTemplate) {
                 // cache the template for later use
-                mustacheCache[template] = Mustache.compile(rawTemplate);
+                handlebarsCache[template] = Handlebars.compile(rawTemplate);
                 // Then render it can callback
-                callback(mustacheCache[template](data));
+                callback(handlebarsCache[template](data));
             },
             error: function ( jqXHR, textStatus, errorThrown) {
                 throw new Error(errorThrown);

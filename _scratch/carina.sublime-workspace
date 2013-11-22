@@ -1,0 +1,1338 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"front",
+				"frontLoader"
+			],
+			[
+				"pane",
+				"paneHeight"
+			],
+			[
+				"panel",
+				"panelreg"
+			],
+			[
+				"section",
+				"sectionHeight"
+			],
+			[
+				"sec",
+				"sectionHeight"
+			],
+			[
+				"ov",
+				"ovr_sight"
+			],
+			[
+				"res",
+				"resizr"
+			],
+			[
+				"h",
+				"hoppersize"
+			],
+			[
+				"meimg",
+				"meimgsession"
+			],
+			[
+				"re",
+				"response"
+			],
+			[
+				"lookinat",
+				"lookingat"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"backg",
+				"backgroundColor"
+			],
+			[
+				"plus",
+				"plusandminus"
+			],
+			[
+				"work",
+				"workingwithanewcube"
+			],
+			[
+				"kill",
+				"killcube"
+			],
+			[
+				"a",
+				"activator"
+			],
+			[
+				"cube",
+				"cubearrayediting"
+			],
+			[
+				"ne",
+				"newcategindex"
+			],
+			[
+				"new",
+				"newrow"
+			],
+			[
+				"addrow",
+				"addrow_open  (variable)"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"target",
+				"targeted"
+			],
+			[
+				"ac",
+				"activation"
+			],
+			[
+				"sele",
+				"selectorgeneral"
+			],
+			[
+				"cub",
+				"cubedescender"
+			],
+			[
+				"the",
+				"thepersistence"
+			],
+			[
+				"color",
+				"colorshift"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"cell",
+				"celltxt"
+			],
+			[
+				"shape",
+				"shapeshcomplet"
+			],
+			[
+				"shapes",
+				"shapeshifterhopper"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"fir",
+				"firstly"
+			],
+			[
+				"key",
+				"keydown"
+			],
+			[
+				"cat",
+				"catopen"
+			],
+			[
+				"categ",
+				"categorical"
+			],
+			[
+				"append",
+				"append"
+			],
+			[
+				"this",
+				"thisproj"
+			],
+			[
+				"tc",
+				"tcallme"
+			],
+			[
+				"coor",
+				"coords"
+			],
+			[
+				"get",
+				"getJSON"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"Ta",
+				"table-cell"
+			],
+			[
+				"font",
+				"font"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"t",
+				"text-transform"
+			],
+			[
+				"list-styl",
+				"list-style-type"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"ori",
+				"ordinance_splitted"
+			],
+			[
+				"kat",
+				"kategoried"
+			],
+			[
+				"ka",
+				"kategoried"
+			],
+			[
+				"email",
+				"emailoutput"
+			],
+			[
+				"fade",
+				"fadeOut  (function)"
+			],
+			[
+				"Set",
+				"setTimeout"
+			],
+			[
+				"scene",
+				"sceneposition"
+			],
+			[
+				"m",
+				"mousewheel"
+			],
+			[
+				"sce",
+				"sceneposition"
+			],
+			[
+				"fadeT",
+				"fadeToggle  (function)"
+			],
+			[
+				"mid",
+				"midpoint"
+			],
+			[
+				"shiftto",
+				"shifttocoord"
+			],
+			[
+				"shift",
+				"shiftshift"
+			],
+			[
+				"buffer_",
+				"buffer_vert"
+			],
+			[
+				"x",
+				"x_dir"
+			],
+			[
+				"scen",
+				"scenebracket"
+			],
+			[
+				"img",
+				"imgperscenecounter"
+			],
+			[
+				"de",
+				"depth"
+			],
+			[
+				"scroll",
+				"scrollfactor  (variable)"
+			],
+			[
+				"time",
+				"time_b"
+			],
+			[
+				"delta",
+				"deltaY"
+			],
+			[
+				"mouse",
+				"mouseY"
+			],
+			[
+				"pan",
+				"paneheight"
+			],
+			[
+				"wp",
+				"wpwidth"
+			],
+			[
+				"gyear",
+				"gyear-10"
+			],
+			[
+				"Se",
+				"sevenorless"
+			],
+			[
+				"is",
+				"ismobile"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"se",
+				"sevenorless"
+			],
+			[
+				"flai",
+				"flailOut"
+			],
+			[
+				"glast",
+				"glastw"
+			],
+			[
+				"pl",
+				"plshold"
+			],
+			[
+				"d",
+				"deliciouscentering"
+			],
+			[
+				"mas",
+				"masterwidth"
+			],
+			[
+				"kundenlett",
+				"kundenletterwidth"
+			],
+			[
+				"kontakt",
+				"kontakt_play"
+			],
+			[
+				"ind",
+				"index2"
+			],
+			[
+				"push",
+				"pushOut"
+			],
+			[
+				"white",
+				"whiteSmoke"
+			],
+			[
+				"list",
+				"list-style-type:   (property)"
+			],
+			[
+				"sub",
+				"substring"
+			],
+			[
+				"float",
+				"floatingpath"
+			],
+			[
+				"iam",
+				"iamoldschool"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"window",
+				"windowpane"
+			],
+			[
+				"hard",
+				"hardheight"
+			],
+			[
+				"r",
+				"relative"
+			],
+			[
+				"num",
+				"numbered"
+			],
+			[
+				"atr",
+				"attrcircleinit"
+			],
+			[
+				"conc",
+				"concatted"
+			],
+			[
+				"brows",
+				"browsermassive"
+			],
+			[
+				"brow",
+				"browserobject"
+			],
+			[
+				"kom",
+				"komp_nav"
+			],
+			[
+				"ad",
+				"addClass  (function)"
+			],
+			[
+				"ref_",
+				"ref_kundern"
+			],
+			[
+				"top",
+				"topcompensate"
+			],
+			[
+				"poin",
+				"pointLight"
+			],
+			[
+				"data",
+				"data-stats"
+			],
+			[
+				"sortEle",
+				"sortElements"
+			],
+			[
+				"you",
+				"youtubecount  (variable)"
+			],
+			[
+				"vimeo",
+				"vimeocount"
+			],
+			[
+				"browser",
+				"browsercount"
+			],
+			[
+				"br",
+				"brincrement"
+			],
+			[
+				"backgr",
+				"background-size"
+			],
+			[
+				"backrg",
+				"background-image"
+			],
+			[
+				"pla",
+				"platz"
+			],
+			[
+				"f",
+				"font-weight"
+			],
+			[
+				"rea",
+				"readCookie"
+			],
+			[
+				"size",
+				"sizeshifter"
+			],
+			[
+				"w",
+				"whatisit"
+			],
+			[
+				"star",
+				"starone"
+			],
+			[
+				"kont",
+				"kontakte_c1"
+			],
+			[
+				"person",
+				"personalcounter"
+			],
+			[
+				"slid",
+				"slid-1"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/index.php",
+			"settings":
+			{
+				"buffer_size": 2248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/js/master.js",
+			"settings":
+			{
+				"buffer_size": 2389,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/js/util.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/php/getgrid.php",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/css/sass/mobile/grid.scss",
+			"settings":
+			{
+				"buffer_size": 84,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/css/sass/_lib/base.scss",
+			"settings":
+			{
+				"buffer_size": 720,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/css/sass/mobile/front.scss",
+			"settings":
+			{
+				"buffer_size": 1303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/orbiter/Propulsion/carina/inc/grid.mustache",
+			"settings":
+			{
+				"buffer_size": 111,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/YUI Compressor.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"i n",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insa",
+				"Tag: Insert as Tag"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/orbiter/Propulsion/carina/css/sass/mobile/top.scss",
+		"/Volumes/orbiter/Propulsion/carina/css/sass/mobile/_mobile.scss",
+		"/Volumes/orbiter/Propulsion/carina/css/master.scss",
+		"/Volumes/orbiter/Propulsion/eject/css/sass/mobile/_mobile.scss",
+		"/Volumes/orbiter/Propulsion/eject/css/sass/mobile/typography.scss",
+		"/Volumes/orbiter/Propulsion/eject/css/master.scss",
+		"/Users/Ascension/Dropbox/Unify/_Boilerplate/css/master.scss",
+		"/Volumes/orbiter/Propulsion/object/front/css/master.scss",
+		"/Volumes/orbiter/Propulsion/eject/css/sass/_lib/base.scss",
+		"/Volumes/orbiter/Propulsion/eject/css/sass/_lib/typography.scss",
+		"/Volumes/orbiter/Propulsion/carina/js/master.js",
+		"/Volumes/orbiter/Propulsion/curiosity/js/master.js",
+		"/Users/Ascension/Downloads/bootstrap-3.0.0/less/type.less",
+		"/Volumes/orbiter/Propulsion/curiosity/js/shift_master.js",
+		"/Volumes/orbiter/Propulsion/curiosity/js/micro_master.js",
+		"/Volumes/orbiter/Propulsion/curiosity/js/cutouts.js",
+		"/Applications/Canary.app/Contents/Resources/en.lproj/InfoPlist.strings",
+		"/Volumes/orbiter/Propulsion/carina/js/lib/jquery.mousewheel.js",
+		"/Volumes/orbiter/Propulsion/carina/php/getcovers.php",
+		"/Volumes/orbiter/Propulsion/carina/back/php/getcovers.php",
+		"/Volumes/orbiter/Propulsion/carina/js/master-m.js",
+		"/Users/Ascension/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Volumes/orbiter/Propulsion/carina/back/js/master.js",
+		"/Users/Ascension/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/orbiter/Propulsion/SIT2013/js/main.js",
+		"/Volumes/orbiter/Propulsion/SIT2013/inc/info.php",
+		"/Volumes/orbiter/Propulsion/SIT2013/inc/helfer.php",
+		"/Volumes/orbiter/Propulsion/SIT2013/js/load/partner.js",
+		"/Volumes/orbiter/Propulsion/SIT2013/js/load/kontakt.js",
+		"/Volumes/orbiter/Propulsion/SIT2013/js/load/helfer.js",
+		"/Volumes/orbiter/Propulsion/SIT2013/js/load/hospitality.js",
+		"/Volumes/orbiter/Propulsion/object/back/js/projects.js",
+		"/Volumes/orbiter/Propulsion/object/back/js/lib/jquery.filedrop.js",
+		"/Users/Ascension/Dropbox/Unify/massiv.js",
+		"/Volumes/orbiter/Propulsion/object/back/js/master.js",
+		"/Library/Preferences/com.apple.windowserver.plist",
+		"/Users/Ascension/Desktop/magnet/js/pull.js",
+		"/Volumes/orbiter/Propulsion/massive/php/getemployee.php",
+		"/Volumes/orbiter/Desktop/object.sql",
+		"/Users/Ascension/Downloads/getemployee.php",
+		"/Volumes/orbiter/Propulsion/object/front/js/descend.js",
+		"/Volumes/orbiter/Propulsion/curiosity/js/lib/raphael-min.js",
+		"/Volumes/orbiter/Propulsion/curiosity/img/grand/s01/line.svg",
+		"/Volumes/orbiter/Propulsion/curiosity/css/grand_master.scss",
+		"/Volumes/orbiter/Propulsion/curiosity/grand.html",
+		"/Volumes/orbiter/Propulsion/curiosity/inc/13.html",
+		"/Volumes/orbiter/Propulsion/curiosity/index.html",
+		"/Users/Ascension/Library/Application Support/Sublime Text 2/Packages/Web Inspector/swi.sublime-settings",
+		"/Volumes/orbiter/Propulsion/curiosity/css/shift_master.scss",
+		"/Users/mif/Desktop/massiv.js",
+		"/Users/mif/Desktop/Dropbox/object/js/shapeshifter.js",
+		"/Volumes/Webserver/mif/curiosity/shift.html",
+		"/Users/mif/Desktop/Dropbox/object/js/descend.js",
+		"/Users/mif/Desktop/Dropbox/object/js/project.js",
+		"/Volumes/Webserver/mif/curiosity/draw.html",
+		"/Volumes/Webserver/mif/curiosity/type/type.css",
+		"/Volumes/Webserver/mif/curiosity/css/master.scss",
+		"/Volumes/Webserver/mif/massive/js/command.js",
+		"/Volumes/Webserver/mif/curiosity/flight.html",
+		"/Volumes/Webserver/mif/SIT2013/_old/20130318/index.php",
+		"/Volumes/Webserver/mif/SIT2013/_old/20130318/kontakt.php",
+		"/Volumes/Webserver/mif/SIT2013/perch/config/config.php",
+		"/Volumes/Webserver/mif/SIT2013/.htaccess",
+		"/Volumes/Webserver/mif/SIT2013/php/cache_a.php",
+		"/Volumes/Webserver/mif/SIT2013/css/_template.scss",
+		"/Volumes/Webserver/mif/SIT2013/type/type.css",
+		"/Volumes/Webserver/mif/SIT2013/css/load/news.scss",
+		"/Volumes/Webserver/mif/SIT2013/css/load/partner.scss",
+		"/Volumes/Webserver/mif/SIT2013/css/master.scss",
+		"/Volumes/Webserver/mif/SIT2013/css/load/_jazz.scss",
+		"/Volumes/Webserver/mif/SIT2013/css/_jazz",
+		"/Users/mif/Downloads/t/demos/index.html",
+		"/Volumes/Webserver/beta/perdikidis/css/master.css",
+		"/Volumes/Webserver/mif/SIT_practice/hospitality/index.html",
+		"/Volumes/Webserver/mif/SIT2013/js/lib/cssSandpaper.js",
+		"/Users/mif/Downloads/cssSandpaper-master 2/shared/js/asamuzak.jp/textshadow.js",
+		"/Users/mif/Downloads/cssSandpaper-master 2/shared/js/cssQuery-p.js",
+		"/Users/mif/Downloads/cssSandpaper-master 2/shared/js/cssSandpaper.js",
+		"/Users/mif/Downloads/cssSandpaper-master 2/shared/js/EventHelpers.js",
+		"/Users/mif/Downloads/cssSandpaper-master 2/shared/js/jcoglan.com/sylvester.js",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/B02EBB74-C590-4E3E-BA56-2C6F2BF5F90D/aktuelles.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/ADE2CA7F-1735-4B55-8BEF-0449696AABED/aktuelles.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/9335D508-28FC-40F0-AD36-B3F2FBFE37B9/config.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/12FF9DC5-8783-4716-9330-FD9E31FFE7E6/config.php",
+		"/Volumes/Webserver/beta/sonderschule/css/01.css",
+		"/Volumes/Webserver/beta/swisssecurity/post.php",
+		"/Volumes/Webserver/beta/swisssecurity/perch/addons/apps/perch_blog/templates/blog/post.html",
+		"/Volumes/Webserver/beta/swisssecurity/perch/addons/apps/perch_blog/templates/blog/post_in_list.html",
+		"/Volumes/Webserver/beta/swisssecurity/news.php",
+		"/Volumes/Webserver/beta/swisssecurity/perch/addons/apps/perch_blog/templates/blog/post 2.html",
+		"/Volumes/Webserver/beta/sonderschule/perch/addons/apps/perch_blog/runtime.php",
+		"/Volumes/Webserver/beta/sonderschule/perch/addons/apps/perch_blog/PerchBlog_Post.class.php",
+		"/Volumes/Webserver/beta/sonderschule/perch/addons/apps/perch_blog/index.php",
+		"/Users/mif/Downloads/perch_blog_v3.6.1/blog/index.php",
+		"/Volumes/Webserver/beta/sonderschule/offene_stellen.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/D047A573-7BB6-4CA8-B0D3-296A0DFB40D8/config.php",
+		"/Volumes/Webserver/beta/sonderschule/perch/config/config.php",
+		"/Volumes/Webserver/beta/sonderschule/perch/config/apps.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/2B948072-B118-414D-9115-D2810632FDA6/config.php",
+		"/Volumes/Webserver/beta/ODAG/_old/20130215/live/odag-sh.ch/perch/config/config.php",
+		"/Volumes/Webserver/beta/ODAG/pruefbar.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/FCF59C94-3F5F-4F53-B95E-F6901699FFA1/pruefbar.php",
+		"/Volumes/Webserver/beta/ODAG/css/master.css",
+		"/Volumes/Webserver/beta/ODAG/_old/20130215/live/odag-sh.ch/css/master.css",
+		"/Volumes/Webserver/beta/ODAG/js/master-m.js",
+		"/Volumes/Webserver/mif/lookbook/type/type.css",
+		"/Volumes/Webserver/beta/sonderschule/js/master.js",
+		"/Volumes/Webserver/beta/ODAG/js/master.js",
+		"/Volumes/Webserver/beta/ODAG/js/selectivizr-min.js",
+		"/Volumes/Webserver/beta/SIT/js/master.js",
+		"/Volumes/Webserver/mif/testpattern/css/master.scss",
+		"/Volumes/Webserver/beta/swisssecurity/kontakt.php",
+		"/Volumes/Webserver/beta/swisssecurity/css/master.css",
+		"/Volumes/Webserver/beta/swisssecurity/js/master-m.js",
+		"/Volumes/Webserver/beta/SIT_2/hospitality/index.html",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/4794746E-37E9-4AFE-B1A4-878931E6A0C1/command.js",
+		"/Volumes/Webserver/beta/SIT/kontakt.php",
+		"/Volumes/Webserver/beta/SIT/hospitality.php",
+		"/Volumes/Webserver/beta/massive/m/js/master-m.js",
+		"/Volumes/Webserver/beta/massive/m/css/master.scss",
+		"/Volumes/Webserver/beta/massive/m/css/master.css",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/748543ED-38D4-413D-8494-8A6980DB8740/kontakt.php",
+		"/Users/mif/Library/Caches/Cleanup At Startup/Transmit/23A6D18D-D6D6-49A1-A938-9213B6E1ADB3/index.html",
+		"/Volumes/Webserver/beta/flow/index.php",
+		"/Volumes/Webserver/beta/g_rheintal/index.html",
+		"/Volumes/Webserver/beta/SIT/index.php",
+		"/Users/mif/Rogue/uploadr/index.html",
+		"/Volumes/Webserver/beta/curiosity/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"25px",
+			"p>",
+			"blur",
+			"sec",
+			"sex",
+			"map",
+			"windowpane",
+			"panewidth",
+			"paneheight",
+			"going",
+			"mousewheel",
+			"middle",
+			"open",
+			"me_image",
+			"drag",
+			"$other",
+			"$her",
+			"other",
+			"$her",
+			"active",
+			"$her",
+			".her",
+			"her",
+			"coverimg",
+			"hopper",
+			"object",
+			"editorinit",
+			"cubedescend",
+			"cubegenerator",
+			" counter",
+			"counter",
+			"rowcount",
+			"counter",
+			"img/",
+			"php/",
+			"img/",
+			"yeah",
+			"php/",
+			"hoppersize",
+			"addrow_height",
+			" counter",
+			"counter",
+			"cubecounter",
+			"animate",
+			"onDocumentMouseUp",
+			"onDocumentMouseDown",
+			"onDocumentMouseMove",
+			"camera",
+			"heylookatme",
+			"renderer",
+			"plane",
+			"projector",
+			"scene",
+			" scene",
+			"scene",
+			"tcallme",
+			"tcube",
+			"tnumber",
+			"tref",
+			"strow",
+			" trow",
+			"trow",
+			"separated",
+			"onMouseDownPosition",
+			"onMouseDownPhi",
+			" phi",
+			"phi",
+			"onMouseDownTheta",
+			" theta",
+			"theta",
+			"radious",
+			"isMouseDown",
+			"stnumber",
+			"strow",
+			"trow",
+			"editor_",
+			"stnumber",
+			"tcube",
+			" tnumber",
+			"tnumber",
+			"tref",
+			"strow",
+			"editor_trow",
+			" trow",
+			"trow",
+			"tcallme",
+			"renderer",
+			"heylookatme",
+			"camera",
+			"init",
+			"scene",
+			"key",
+			"lookatme",
+			"uploader",
+			"be_move",
+			"hoppersize",
+			"delay",
+			"wait",
+			"pause",
+			"presence",
+			"val('')",
+			"targeted",
+			"indexof",
+			"rowcount",
+			"json",
+			"key",
+			"[data-",
+			"data-",
+			"oversight_sight",
+			"targeted",
+			"addClass",
+			"addclass",
+			"targeted",
+			"kill",
+			"a_cube",
+			"orig",
+			"empty",
+			"info_category",
+			"wpwidth",
+			"width",
+			"shapeshifterhopper",
+			"unbind",
+			"destroy",
+			"projector",
+			"shap",
+			"cell.php",
+			"cell",
+			"scene"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"h2",
+			"perch2_live_",
+			"<p>Lissie ist einfach umwerfend. Seit ihrer Jugend der Musik verschrieben, war ihr eigentlicher Entdecker Lenny Kravitz, der sie 2008 f&uuml;rs Vorprogramm seiner Tournee verpflichtete. Irgendwo zwischen Rock, Pop und Folk anzusiedeln, sind ihre Songs eindringlich, rau und nat&uuml;rlich. Den Durchbruch schaffte Sie mit ihrem Album &bdquo;Catching a Tiger&ldquo;, insbesondere ihr Song &bdquo;When I&rsquo;m Alone&ldquo; wird oft im Radio gespielt. Die BBC formulierte es treffend: &bdquo;Lissie hat eine der gr&ouml;ssten weiblichen Singstimmen einer ganzen Generation, und das, ohne sich &uuml;berhaupt anzustrengen.&ldquo; ",
+			", ",
+			",",
+			"Band",
+			"Verband",
+			"&laquo;STARS IN TOWN&raquo;",
+			"<img src=\"img/pnt.png\" class=\"pnt\" />",
+			"<span>&and;</span>",
+			"<span>v</span>",
+			"FLOATER",
+			"php",
+			"",
+			"img",
+			"php",
+			"img",
+			" ",
+			"php",
+			"angebot",
+			"physiotherapie",
+			"top",
+			".",
+			"ep",
+			"loader(false);",
+			"loader(true);",
+			"ClanBook",
+			"rgba(0,0,0,.35)",
+			"spotselect-4",
+			"spotselect-3",
+			"b",
+			",.7)",
+			"src=\"inc/awe_testbild/",
+			"990px",
+			"gif",
+			"<span class=\"prize_b\">"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Volumes/orbiter/Propulsion/carina/index.php",
+					"settings":
+					{
+						"buffer_size": 2248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								804,
+								804
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "/Volumes/orbiter/Propulsion/carina/js/master.js",
+					"settings":
+					{
+						"buffer_size": 2389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1100,
+								1100
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Volumes/orbiter/Propulsion/carina/js/util.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "/Volumes/orbiter/Propulsion/carina/php/getgrid.php",
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/Volumes/orbiter/Propulsion/carina/css/sass/mobile/grid.scss",
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Volumes/orbiter/Propulsion/carina/css/sass/_lib/base.scss",
+					"settings":
+					{
+						"buffer_size": 720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 158.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Volumes/orbiter/Propulsion/carina/css/sass/mobile/front.scss",
+					"settings":
+					{
+						"buffer_size": 1303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "/Volumes/orbiter/Propulsion/carina/inc/grid.mustache",
+					"settings":
+					{
+						"buffer_size": 111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				3
+			],
+			[
+				2,
+				0,
+				3,
+				2
+			],
+			[
+				0,
+				1,
+				1,
+				3
+			],
+			[
+				2,
+				2,
+				3,
+				3
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.321149902344,
+			0.602814368987,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 94.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

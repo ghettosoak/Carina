@@ -19,9 +19,8 @@
 			</div>
 			<div id="color"></div>
 		</div>
-		<div class="carousel">
-			<div id="front" class="hiding">
-				<div class="top_spacer"></div>
+		<div id="carousel" class="">
+			<div id="front" class="">
 				<div id="sec01">
 					<div id="slide01" class="back" data-category="my_proj"></div>
 					<div class="put">
