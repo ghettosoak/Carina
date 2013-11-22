@@ -1,15 +1,17 @@
-ous(function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
+(function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
 (function(){try{console.log();return window.console;}catch(a){return (window.console={});}}());
 
 //jquery v1.8.0 is included in this mess. Copyright 2012 jQuery Foundation and other contributors.
 
 var $windowpane = $(window)
 var $category, $inside, $project, $detail, $other;
+var projSelected = false;
 // var $proj_name, $proj_client, $proj_text, $proj_img;
 var nowediting;
 var imgsession = [];
 var current_category;
 var covering;
+var current_proj;
 
 $(document).ready(function(){
 	if ($.browser.msie && parseInt($.browser.version, 10) < 7) $('body').supersleight({shim: 'img/transparent.gif'});
@@ -28,8 +30,6 @@ $windowpane.load(function(){
 	// $proj_img = $('#proj_img')
 
 	cover_pull()
-
-	
 
 	$('.body').css('height', $windowpane.height()-50)
 
@@ -125,6 +125,9 @@ function cat_select(){
 }
 
 function proj_select(){
+	if (projSelected) $project.find('div').sortable('destroy');
+	projSelected = true;
+
 	$project.off().on('click', 'div', function(){
 		var $that = $(this)
 		nowediting = $that.data('pointer')
@@ -138,10 +141,18 @@ function proj_select(){
 				},
 				url: "php/getproject.php"
 			}).done( function(proj){
+				console.log(proj)
+
+				current_proj = proj.details;
+
 				$detail.addClass('active')
 				$that.addClass('selected').siblings().removeClass('selected')
 
-				console.log(proj)
+				if (proj.details.frontpromoted === '1') $('.proj_frontpromotion').addClass('promoted')
+				else $('.proj_frontpromotion').removeClass('promoted')
+
+				if (proj.details.allprojpromoted === '1') $('.proj_allprojpromotion').addClass('promoted')
+				else $('.proj_allprojpromotion').removeClass('promoted')
 
 				$('#proj_name').val(proj.details.name)
 				$('#proj_client').val(proj.details.client)
@@ -150,8 +161,9 @@ function proj_select(){
 				$('#proj_img').empty()
 
 				render('proj_img', proj.details, function(returned){
-					console.log(returned)
 					$detail.find('#proj_img').append(returned)
+
+					// $('#proj_img').find('div[data-img="'+proj.details.+'"]')
 
 					$('.img_kill').off().on('click', function(e){
 						var $that = $(this)
@@ -165,6 +177,12 @@ function proj_select(){
 						}).done( function(youarehere){
 							$that.parent().remove();
 						})
+					})
+
+					$('.img_tile').off().on('click', function(e){
+						var $that = $(this);
+						$that.addClass('yeahthistile1')
+						.parent().siblings().find('.img_tile').removeClass('yeahthistile1')
 					})
 				})
 				
@@ -189,7 +207,8 @@ function proj_select(){
 				$project.find('[data-pointer="'+nowediting+'"]').addClass('selected')
 			})
 		}
-	});
+	})
+	.sortable();
 
 	$('.proj_kill').off().on('click', function(e){
 		e.stopPropagation();
@@ -211,8 +230,29 @@ $('#proj_name').on('keyup', function(e){
 	$project.find('[data-pointer="'+nowediting+'"] p').html($(this).val())
 })
 
+$('.promoter').on('click', function(){
+	var $that = $(this)
+	if ($that.hasClass('proj_allprojpromotion')) $that.toggleClass('promoted')
+	else $that.addClass('promoted')
+})
+
 $('#save').on('click', function(){
+	$savebutton = $(this)
 	if (current_category !== 'carina'){
+
+		var thisisthetitleimage = $('.yeahthistile1').parent().data('img')
+		var andthisisitspath;
+
+		$.each(current_proj.img, function(e, i){
+			if (i.id == thisisthetitleimage) andthisisitspath = i.path.split('/')[2];
+		})
+
+		var theOrder = [];
+		$project.find('div').each(function(e){
+			var theIndex = $(this).data('pointer');
+			if (theIndex !== 'NEW') theOrder[e] = theIndex;
+		})
+
 		$.ajax({
 			type: "POST",
 			dataType:'JSON',
@@ -222,11 +262,17 @@ $('#save').on('click', function(){
 				name: $('#proj_name').val(),
 				client: $('#proj_client').val(),
 				text: $('#proj_text').val(),
-				imgs:imgsession
+				tile: $('.yeahthistile1').parent().data('img'),
+				tilepath: andthisisitspath,
+				frontpromote:$('.proj_frontpromotion').hasClass('promoted'),
+				allprojpromote:$('.proj_allprojpromotion').hasClass('promoted'),
+				imgs:imgsession,
+				order:theOrder
 			},
 			url: "php/save.php"
 		}).done( function(ohyeah){
-
+			$savebutton.addClass('saved')
+			setTimeout(function(){$savebutton.removeClass('saved')},3000)
 		})
 	}else{
 		$.ajax({

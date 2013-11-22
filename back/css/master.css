@@ -67,7 +67,13 @@ a {
     padding: 0px 20px; }
   .head #save {
     padding: 0px 10px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; }
+    .head #save.saved {
+      background-color: #00cd32; }
 
 .body {
   width: 100%; }
@@ -117,6 +123,7 @@ a {
     display: block; }
   .body .detail, .body .other {
     width: 50%;
+    padding: 0px 5px;
     position: relative;
     float: left;
     opacity: 0;
@@ -130,10 +137,20 @@ a {
       font-size: 11px;
       width: 100%;
       float: left; }
+    .body .detail .promoter, .body .other .promoter {
+      position: relative;
+      float: left;
+      height: 26px;
+      width: 150px;
+      border: 1px #ccc solid;
+      margin: 5px;
+      cursor: pointer; }
+      .body .detail .promoter.promoted, .body .other .promoter.promoted {
+        background-color: #ccc; }
     .body .detail input, .body .detail textarea, .body .detail > div, .body .other input, .body .other textarea, .body .other > div {
       position: relative;
       float: left;
-      width: 95%;
+      width: 100%;
       margin: 5px 5px 15px 5px;
       padding: 5px;
       border-top: 1px #ccc solid;
@@ -156,16 +173,24 @@ a {
         overflow: hidden;
         margin: 0px 5px 5px 0px;
         background-size: cover; }
-        .body .detail > div div .img_kill, .body .detail > div div .file_kill, .body .other > div div .img_kill, .body .other > div div .file_kill {
+        .body .detail > div div .img_kill, .body .detail > div div .file_kill, .body .detail > div div .img_tile, .body .other > div div .img_kill, .body .other > div div .file_kill, .body .other > div div .img_tile {
           position: absolute;
           width: 50px;
           height: 50px;
-          top: 0px;
-          left: 0px;
           z-index: 1000;
           display: none;
           cursor: pointer; }
-        .body .detail > div div:hover .img_kill, .body .detail > div div:hover .file_kill, .body .other > div div:hover .img_kill, .body .other > div div:hover .file_kill {
+        .body .detail > div div .img_kill, .body .detail > div div .file_kill, .body .other > div div .img_kill, .body .other > div div .file_kill {
+          top: 0px;
+          left: 0px; }
+        .body .detail > div div .img_tile, .body .other > div div .img_tile {
+          bottom: 0px;
+          right: 0px;
+          opacity: .5; }
+          .body .detail > div div .img_tile.yeahthistile1, .body .other > div div .img_tile.yeahthistile1 {
+            opacity: 1;
+            display: block; }
+        .body .detail > div div:hover .img_kill, .body .detail > div div:hover .file_kill, .body .detail > div div:hover .img_tile, .body .other > div div:hover .img_kill, .body .other > div div:hover .file_kill, .body .other > div div:hover .img_tile {
           display: block; }
     .body .detail.active, .body .other.active {
       opacity: 1; }

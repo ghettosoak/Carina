@@ -20,17 +20,17 @@
 			<div id="color"></div>
 		</div>
 		<div class="carousel">
-			<div id="front">
+			<div id="front" class="hiding">
 				<div class="top_spacer"></div>
 				<div id="sec01">
-					<div id="slide01" class="back"></div>
+					<div id="slide01" class="back" data-category="my_proj"></div>
 					<div class="put">
 						<p>»See more <span>My Projects</span></p>
 					</div>
 				</div>
 
 				<div id="sec02">
-					<div id="slide02" class="back"></div>
+					<div id="slide02" class="back" data-category="posters"></div>
 					<div class="put">
 						<p>»See more <span>Posters</span></p>
 					</div>
@@ -38,7 +38,7 @@
 				</div>
 
 				<div id="sec03">
-					<div id="slide03" class="back"></div>
+					<div id="slide03" class="back" data-category="logos"></div>
 					<div class="put">
 						<p>»See more <span>Logos</span></p>
 					</div>
@@ -46,7 +46,7 @@
 				</div>
 
 				<div id="sec04">
-					<div id="slide04" class="back"></div>
+					<div id="slide04" class="back" data-category="corporate_pub"></div>
 					<div class="put">
 						<p>»See more <span>Corporate Publication</span></p>
 					</div>
@@ -54,7 +54,7 @@
 				</div>
 
 				<div id="sec05">
-					<div id="slide05" class="back"></div>
+					<div id="slide05" class="back" data-category="signage"></div>
 					<div class="put">
 						<p>»See more <span>Signage</span></p>
 					</div>
@@ -62,16 +62,16 @@
 				</div>
 
 				<div id="sec06">
-					<div id="slide06" class="back"></div>
+					<div id="slide06" class="back" data-category="websites"></div>
 					<div class="put">
 						<p>»See more <span>Websites</span></p>
 					</div>
 					<div class="sec_color"></div>
 				</div>
 			</div>
-			<div class="grid">
+			<div id="grid">
 			</div>  
-			<div class="project">
+			<div id="project">
 			</div>
 		</div>
 		

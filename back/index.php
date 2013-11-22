@@ -33,6 +33,10 @@
 			<div class="project">
 			</div>
 			<div class="detail">
+				<p>promoted to front</p>
+				<span class="proj_frontpromotion promoter"></span>
+				<p>promoted on all projects</p>
+				<span class="proj_allprojpromotion promoter"></span>
 				<p>project name</p>
 				<input id="proj_name"></input>
 				<p>project client</p>

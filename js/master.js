@@ -5,15 +5,15 @@
 //like something you see, but can't read this unholy mess? drop me a line at (mif)[at](awe)[minus](schaffhausen)[dot](com)
 
 var $windowPane = $(window)
-var $front, $theSections;
+var $theSections;
 var paneHeight, paneWidth;
 var sectionHeight;
 var depth = 0, panel = 0, panelreg = 0, position = 0;
 var large;
+var $front = $('#front');
+var $grid = $('#grid')
 
 $(document).ready(function(){
-	$front = $('#front');
-
 	paneHeight = $windowPane.height();
 	paneWidth = $windowPane.width();
 
@@ -40,37 +40,51 @@ $(document).ready(function(){
 	$front.scroll(function(e){
 		shifter($front.scrollTop());
 	});
+
+	gridLoader('posters')
 });
 
+$front.find('p').on('click', function(){
+	window.location.hash = $(this).parent().siblings('.back').data('category');
+})
 
+$windowPane.bind('hashchange', function(){
+	var hash = (window.location.hash.split('#'));
+	console.log(hash)
+});
 
+function gridLoader(ing){
+	$.ajax({
+		type: "POST",
+		dataType:'JSON',
+		data:ing,
+		url: "php/getgrid.php"
+	}).done( function(tiles){
+
+		render('grid', tiles, function(returned){
+			$grid.append(returned)			
+		})
+
+	});
+}
 
 function shifter(there){
-	panel = (Math.floor(there / sectionHeight))+1;
-	position = (there % sectionHeight);
+    panel = (Math.floor(there / sectionHeight))+1;
+    position = (there % sectionHeight);
 
-	if (panel !== panelreg){
-		$theSections.removeClass()
-		$('#sec0'+panel).addClass('here')
-	}
+    if (panel !== panelreg){
+        $theSections.removeClass()
+        $('#sec0'+panel).addClass('here')
+    }
 
-	panelreg = panel;
+    panelreg = panel;
 
-	// CURRENT
-	$('#slide0'+panel).css('top', map_range(position, 0, sectionHeight, -25, 0)+'%');
+    // CURRENT
+    $('#slide0'+panel).css('top', map_range(position, 0, sectionHeight, -25, 0)+'%');
 
-	// NEXT
-	$('#slide0'+(panel+1)).css('top', map_range(position, 0, sectionHeight, -50, -25)+'%');
+    // NEXT
+    $('#slide0'+(panel+1)).css('top', map_range(position, 0, sectionHeight, -50, -25)+'%');
 }
-
-function map_range(value, low1, high1, low2, high2) {
-    return (low2 + (high2 - low2) * (value - low1) / (high1 - low1)).toFixed(2);
-}
-
-function randomInt(min, max) {
-	return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
 
 
 

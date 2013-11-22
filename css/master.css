@@ -83,6 +83,9 @@ h6, .h6 {
     position: relative;
     float: left; }
 
+.hiding {
+  display: none; }
+
 .top {
   height: 125px;
   position: fixed;
