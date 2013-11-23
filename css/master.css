@@ -76,12 +76,14 @@ body {
   height: 100%;
   position: absolute;
   left: 0px;
-  padding-top: 125px; }
+  padding-top: 125px;
+  opacity: 0; }
   #carousel.ready {
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out; }
+    transition: all 1s ease-in-out;
+    opacity: 1; }
   #carousel > div {
     height: 100%;
     width: 33.33333333%;

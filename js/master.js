@@ -43,11 +43,6 @@ $(document).ready(function(){
 	}	
 });
 
-$(document).ajaxComplete(function( event, request, settings ) {
-	$carousel.addClass('ready'); 
-});
-
-
 var projectReprepare = _.debounce(function(){
 	projectPrepare($project);
 	$proj_img_carousel.css('left', -galleryposition*$proj_img_carousel.parent().width())
@@ -65,6 +60,15 @@ $windowPane.bind('hashchange', function(){
 	hashhistory.push(hash)
 });
 
+$(document).ajaxComplete(function( event, request, settings ) {
+	$carousel.removeClass('lookingat_front lookingat_grid lookingat_project')
+	if (hash.indexOf('home') === 0) $carousel.addClass('lookingat_front');
+	if (hash.indexOf('category') === 0) $carousel.addClass('lookingat_grid');
+	if (hash.indexOf('project') === 0) $carousel.addClass('lookingat_project');
+
+	if (hashhistory.length === 0) setTimeout(function(){ $carousel.addClass('ready') },500)
+});
+
 function frontLoader(){
 	$.ajax({
 		type: "POST",
@@ -76,17 +80,13 @@ function frontLoader(){
 		});
 	});
 
-	$carousel.removeClass('lookingat_grid lookingat_project').addClass('lookingat_front');
-
 	$front.scroll(function(e){
 		shifter($front.scrollTop());
 	});
 }
 
 function gridLoader(ing){
-	if (hashhistory[hashhistory.length-2] === hash){
-		$carousel.removeClass('lookingat_front lookingat_project').addClass('lookingat_grid');
-	}else{
+	if (hashhistory[hashhistory.length-2] !== hash){
 		$.ajax({
 			type: "POST",
 			dataType:'JSON',
@@ -100,7 +100,6 @@ function gridLoader(ing){
 				.find('.tile').on('click', function(){
 					window.location.hash = 'project-'+$(this).data('pointer');
 				})
-				$carousel.removeClass('lookingat_front lookingat_project').addClass('lookingat_grid');
 			})
 		});
 	}
@@ -118,7 +117,6 @@ function projectLoader(ing){
 	}).done( function(proj){
 		render('project', proj, function(returned){
 			projectPrepare($project.empty().append(returned))
-			$carousel.removeClass('lookingat_front lookingat_grid').addClass('lookingat_project');
 		})
 	});
 }
@@ -138,8 +136,6 @@ function projectPrepare($thisone){
 		$proj_img_select = $that.parent().siblings('.proj_img_select')
 		return $projimgs.size() * ($that.parent().width())
 	})
-
-	console.log($thisone)
 
 	$projimgs.css('width', $proj_img_carousel.parent().width())
 
