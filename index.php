@@ -12,12 +12,30 @@
 </head>
 
 <body>
-	<div class="master">
-		<div class="top">
+	<div id="master">
+		<div id="top">
 			<div class="put">
-				
+				<div class="logo"></div>
+				<div class="alt_nav">
+					<p>
+						/ <span data-pointer="all_proj">Work</span>
+						/ <span data-pointer="about">About</span>
+						/ <span data-pointer="contact">Contact</span>
+						/
+					</p>
+				</div>
+				<div class="cat_nav">
+					<div data-pointer="my_proj"><p>My Projects</p></div>
+					<div data-pointer="posters"><p>Posters</p></div>
+					<div data-pointer="logos"><p>Logos</p></div>
+					<div data-pointer="publication"><p>Publication</p></div>
+					<div data-pointer="signage"><p>Signage</p></div>
+					<div data-pointer="websites"><p>Websites</p></div>
+				</div>
 			</div>
-			<div id="color"></div>
+		</div>
+		<div id="interest">
+			<p>HEY</p>
 		</div>
 		<div id="carousel" class="">
 			<div id="front" class="">
@@ -45,9 +63,9 @@
 				</div>
 
 				<div id="sec04">
-					<div id="slide04" class="back" data-category="corporate_pub"></div>
+					<div id="slide04" class="back" data-category="publication"></div>
 					<div class="put">
-						<p>»See more <span>Corporate Publication</span></p>
+						<p>»See more <span>Publication</span></p>
 					</div>
 					<div class="sec_color"></div>
 				</div>
@@ -69,6 +87,7 @@
 				</div>
 			</div>
 			<div id="grid">
+				<div id="grid_inside"></div>
 			</div>  
 			<div id="project">
 			</div>

@@ -25,9 +25,18 @@ $thedarkyellow: rgb(203, 186, 59);
 // DEFINITIONS
 
 $masterwidth: 1024px;
+$distancefromtop: 200px;
 
 @mixin prfl{
 	position:relative;
 	float:left;
 }
+
+@mixin transition($time){
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}
+
 

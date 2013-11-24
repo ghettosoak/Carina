@@ -63,216 +63,433 @@ body {
   margin: 0px;
   background-image: url(../img/texturetastic_gray.png); }
 
-.master {
+#master {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0px;
   left: 0px;
   overflow-x: hidden; }
+  #master.ready #top .cat_nav, #master.ready #carousel, #master.ready #interest {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 1; }
+  #master.lookingat_interest #interest {
+    top: 0px; }
+  #master.lookingat_interest #carousel {
+    top: -100%; }
+  #master.lookingat_front #top .cat_nav {
+    left: 100%; }
+  #master.lookingat_front #carousel {
+    left: 0px; }
+  #master.lookingat_grid #carousel {
+    left: -100%; }
+  #master.lookingat_project #carousel {
+    left: -200%; }
+  #master.lookingat_project #top .cat_nav div p {
+    display: none; }
+  #master.lookingat_project.category-my_proj #top .cat_nav:nth-child(1) p {
+    display: block !important; }
+  #master.lookingat_project.category-posters #top .cat_nav:nth-child(2) p {
+    display: block !important; }
+  #master.lookingat_project.category-logos #top .cat_nav:nth-child(3) p {
+    display: block !important; }
+  #master.lookingat_project.category-publication #top .cat_nav:nth-child(4) p {
+    display: block !important; }
+  #master.lookingat_project.category-signage #top .cat_nav:nth-child(5) p {
+    display: block !important; }
+  #master.lookingat_project.category-websites #top .cat_nav:nth-child(6) p {
+    display: block !important; }
+
+.hiding {
+  display: none; }
+
+#top {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  z-index: 100; }
+  #top .put {
+    margin: auto;
+    max-width: 1024px;
+    height: 100%; }
+    #top .put .logo, #top .put .alt_nav {
+      position: absolute;
+      width: 100%; }
+    #top .put .logo {
+      background-image: url(../img/logo.png);
+      background-size: 150px auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 145px;
+      width: 100%;
+      left: 0px; }
+    #top .put .alt_nav {
+      bottom: 24px; }
+      #top .put .alt_nav p {
+        text-align: center;
+        font-size: 16px; }
+        #top .put .alt_nav p span {
+          cursor: pointer;
+          margin: 0px 10px; }
+    #top .put .cat_nav {
+      position: absolute;
+      width: 100%;
+      height: 12px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0; }
+      #top .put .cat_nav div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        float: left;
+        -webkit-transition: all 0.25 ease-in-out;
+        -moz-transition: all 0.25 ease-in-out;
+        -o-transition: all 0.25 ease-in-out;
+        transition: all 0.25 ease-in-out;
+        cursor: pointer;
+        margin-bottom: 40px; }
+        #top .put .cat_nav div p {
+          position: absolute;
+          bottom: -35px;
+          width: 100%;
+          text-align: center;
+          font-family: stix;
+          font-size: 16px; }
+        #top .put .cat_nav div:nth-child(1) {
+          background-color: #0d7e8d;
+          color: #0d7e8d; }
+        #top .put .cat_nav div:nth-child(2) {
+          background-color: #730b40;
+          color: #730b40; }
+        #top .put .cat_nav div:nth-child(3) {
+          background-color: #c02574;
+          color: #c02574; }
+        #top .put .cat_nav div:nth-child(4) {
+          background-color: #106873;
+          color: #106873; }
+        #top .put .cat_nav div:nth-child(5) {
+          background-color: #cbba3b;
+          color: #cbba3b; }
+        #top .put .cat_nav div:nth-child(6) {
+          background-color: #eccb24;
+          color: #eccb24; }
+
+#interest {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 100%; }
 
 #carousel {
   width: 300%;
   height: 100%;
   position: absolute;
   left: 0px;
-  padding-top: 125px;
+  padding-top: 200px;
   opacity: 0; }
-  #carousel.ready {
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    opacity: 1; }
   #carousel > div {
     height: 100%;
     width: 33.33333333%;
     position: relative;
-    float: left;
-    overflow: scroll; }
-  #carousel.lookingat_front {
-    left: 0px; }
-  #carousel.lookingat_grid {
-    left: -100%; }
-  #carousel.lookingat_project {
-    left: -200%; }
-
-.hiding {
-  display: none; }
-
-.top {
-  height: 125px;
-  position: fixed;
-  width: 100%;
-  z-index: 100; }
-  .top .put {
-    margin: auto;
-    max-width: 1024px;
-    height: 100%;
-    position: relative; }
-
-#front > div:not(.top_spacer) {
-  width: 100%;
-  position: relative;
-  padding: 140px 0;
-  overflow: hidden; }
-  #front > div:not(.top_spacer) .back {
-    height: 150%;
+    float: left; }
+  #carousel #front > div {
+    height: 300px;
     width: 100%;
-    position: absolute;
-    top: -25%;
-    left: 0px;
-    background-position: center center;
-    background-size: cover; }
-  #front > div:not(.top_spacer) .put {
-    margin: auto;
-    max-width: 1024px;
-    height: 100%;
-    position: relative; }
-    #front > div:not(.top_spacer) .put p {
+    position: relative;
+    padding: 100px 0px;
+    overflow: hidden; }
+    #carousel #front > div .back {
+      height: 150%;
+      width: 100%;
       position: absolute;
-      left: 60%;
-      padding: 30px;
-      font-size: 24px;
-      cursor: pointer; }
-      #front > div:not(.top_spacer) .put p span {
-        color: white;
-        font-family: stix; }
-  #front > div:not(.top_spacer) .sec_color {
-    height: 16px;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    z-index: 10; }
-  #front > div:not(.top_spacer)#sec01 {
-    z-index: 1;
-    color: #0d7e8d; }
-    #front > div:not(.top_spacer)#sec01 .sec_color {
-      background-color: #0d7e8d; }
-  #front > div:not(.top_spacer)#sec02 {
-    z-index: 2;
-    color: #730b40; }
-    #front > div:not(.top_spacer)#sec02 .sec_color {
-      background-color: #730b40; }
-  #front > div:not(.top_spacer)#sec03 {
-    z-index: 3;
-    color: #c02574; }
-    #front > div:not(.top_spacer)#sec03 .sec_color {
-      background-color: #c02574; }
-  #front > div:not(.top_spacer)#sec04 {
-    z-index: 4;
-    color: #106873; }
-    #front > div:not(.top_spacer)#sec04 .sec_color {
-      background-color: #106873; }
-  #front > div:not(.top_spacer)#sec05 {
-    z-index: 5;
-    color: #cbba3b; }
-    #front > div:not(.top_spacer)#sec05 .sec_color {
-      background-color: #cbba3b; }
-  #front > div:not(.top_spacer)#sec06 {
-    z-index: 6;
-    color: #eccb24; }
-    #front > div:not(.top_spacer)#sec06 .sec_color {
-      background-color: #eccb24; }
-  #front > div:not(.top_spacer).here .sec_color {
-    position: fixed;
-    top: 125px; }
-
-#grid > div {
-  position: relative;
-  float: left;
-  height: 200px;
-  width: 200px;
-  margin: 10px;
-  cursor: pointer; }
-  #grid > div > div {
-    position: absolute;
-    height: 80%;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    margin: -40% 0px 0px -40%;
-    background-color: black;
-    border-radius: 100%;
-    display: none; }
-    #grid > div > div p {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      color: white; }
-  #grid > div:hover div {
-    display: table; }
-
-#project .proj_img {
-  position: relative;
-  height: 500px;
-  width: 80%;
-  margin: auto;
-  overflow-x: hidden; }
-  #project .proj_img .proj_img_carousel {
-    position: absolute;
-    height: 100%;
-    left: 0px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out; }
-    #project .proj_img .proj_img_carousel div {
+      top: -25%;
+      left: 0px;
+      background-position: center center;
+      background-size: cover; }
+    #carousel #front > div .put {
+      margin: auto;
+      max-width: 1024px;
+      height: 100%;
+      position: relative; }
+      #carousel #front > div .put p {
+        position: absolute;
+        left: 60%;
+        padding: 30px;
+        font-size: 24px;
+        cursor: pointer; }
+        #carousel #front > div .put p span {
+          color: white;
+          font-family: stix; }
+    #carousel #front > div .sec_color {
+      height: 16px;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      z-index: 10; }
+    #carousel #front > div#sec01 {
+      z-index: 1;
+      color: #0d7e8d; }
+      #carousel #front > div#sec01 .sec_color {
+        background-color: #0d7e8d; }
+    #carousel #front > div#sec02 {
+      z-index: 2;
+      color: #730b40; }
+      #carousel #front > div#sec02 .sec_color {
+        background-color: #730b40; }
+    #carousel #front > div#sec03 {
+      z-index: 3;
+      color: #c02574; }
+      #carousel #front > div#sec03 .sec_color {
+        background-color: #c02574; }
+    #carousel #front > div#sec04 {
+      z-index: 4;
+      color: #106873; }
+      #carousel #front > div#sec04 .sec_color {
+        background-color: #106873; }
+    #carousel #front > div#sec05 {
+      z-index: 5;
+      color: #cbba3b; }
+      #carousel #front > div#sec05 .sec_color {
+        background-color: #cbba3b; }
+    #carousel #front > div#sec06 {
+      z-index: 6;
+      color: #eccb24; }
+      #carousel #front > div#sec06 .sec_color {
+        background-color: #eccb24; }
+    #carousel #front > div.here .sec_color {
+      position: fixed;
+      top: 200px; }
+  #carousel #grid {
+    padding-top: 290px; }
+    #carousel #grid #grid_inside {
+      padding: 0px 10px;
       position: relative;
       float: left;
-      height: 100%;
-      display: inline-block;
-      background-size: cover; }
-#project .proj_img_select {
-  position: relative;
-  height: 6px;
-  width: 80%;
-  margin: 0px auto 75px; }
-  #project .proj_img_select div {
-    width: 16.66667%;
-    height: 100%;
-    position: relative;
-    float: left;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    cursor: pointer; }
-    #project .proj_img_select div p {
-      position: absolute;
-      bottom: -35px;
-      width: 100%;
-      text-align: center;
+      width: 100%; }
+      #carousel #grid #grid_inside > div {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0px 0px 10px;
+        cursor: pointer; }
+        #carousel #grid #grid_inside > div > div {
+          position: relative;
+          float: left;
+          height: 100%;
+          width: 100%;
+          background-position: center center;
+          background-size: cover; }
+          #carousel #grid #grid_inside > div > div > div {
+            position: absolute;
+            height: 80%;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            margin: -40% 0px 0px -40%;
+            background-color: black;
+            border-radius: 100%;
+            display: none; }
+            #carousel #grid #grid_inside > div > div > div p {
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              color: white;
+              font-size: 16px;
+              line-height: 18px; }
+              #carousel #grid #grid_inside > div > div > div p span {
+                font-family: stix; }
+  #carousel #project {
+    padding-top: 290px; }
+    #carousel #project .proj_img {
+      position: relative;
+      height: 200px;
+      width: 80%;
+      margin: auto;
+      overflow-x: hidden; }
+      #carousel #project .proj_img .proj_img_carousel {
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        -webkit-transition: all 0.25 ease-in-out;
+        -moz-transition: all 0.25 ease-in-out;
+        -o-transition: all 0.25 ease-in-out;
+        transition: all 0.25 ease-in-out; }
+        #carousel #project .proj_img .proj_img_carousel div {
+          position: relative;
+          float: left;
+          height: 100%;
+          display: inline-block;
+          background-size: cover; }
+    #carousel #project .proj_img_select {
+      position: relative;
+      height: 6px;
+      width: 80%;
+      margin: 0px auto 75px; }
+      #carousel #project .proj_img_select div {
+        width: 16.66667%;
+        height: 100%;
+        position: relative;
+        float: left;
+        -webkit-transition: all 0.25 ease-in-out;
+        -moz-transition: all 0.25 ease-in-out;
+        -o-transition: all 0.25 ease-in-out;
+        transition: all 0.25 ease-in-out;
+        cursor: pointer; }
+        #carousel #project .proj_img_select div p {
+          position: absolute;
+          bottom: -35px;
+          width: 100%;
+          text-align: center;
+          font-family: stix;
+          font-size: 16px; }
+        #carousel #project .proj_img_select div:nth-child(1) {
+          background-color: #0d7e8d;
+          color: #0d7e8d; }
+        #carousel #project .proj_img_select div:nth-child(2) {
+          background-color: #730b40;
+          color: #730b40; }
+        #carousel #project .proj_img_select div:nth-child(3) {
+          background-color: #c02574;
+          color: #c02574; }
+        #carousel #project .proj_img_select div:nth-child(4) {
+          background-color: #106873;
+          color: #106873; }
+        #carousel #project .proj_img_select div:nth-child(5) {
+          background-color: #cbba3b;
+          color: #cbba3b; }
+        #carousel #project .proj_img_select div:nth-child(6) {
+          background-color: #eccb24;
+          color: #eccb24; }
+        #carousel #project .proj_img_select div:hover {
+          height: 15px; }
+    #carousel #project p {
+      text-align: center; }
+    #carousel #project .client {
       font-family: stix;
-      font-size: 16px; }
-    #project .proj_img_select div:nth-child(1) {
-      background-color: #0d7e8d;
-      color: #0d7e8d; }
-    #project .proj_img_select div:nth-child(2) {
-      background-color: #730b40;
-      color: #730b40; }
-    #project .proj_img_select div:nth-child(3) {
-      background-color: #c02574;
-      color: #c02574; }
-    #project .proj_img_select div:nth-child(4) {
-      background-color: #106873;
-      color: #106873; }
-    #project .proj_img_select div:nth-child(5) {
-      background-color: #cbba3b;
-      color: #cbba3b; }
-    #project .proj_img_select div:nth-child(6) {
-      background-color: #eccb24;
-      color: #eccb24; }
-    #project .proj_img_select div:hover {
-      height: 15px; }
-#project p {
-  text-align: center; }
-#project .client {
-  font-family: stix;
-  font-size: 16px;
-  margin-bottom: 6px; }
-#project .name {
-  font-size: 22px;
-  margin-bottom: 15px; }
+      font-size: 16px;
+      margin-bottom: 6px; }
+    #carousel #project .name {
+      font-size: 22px;
+      margin-bottom: 15px; }
+    #carousel #project .text {
+      margin-bottom: 100px; }
 
+@media screen and (min-width: 768px) {
+  #top {
+    height: 200px;
+    width: 100%;
+    z-index: 100; }
+    #top .put .logo {
+      background-image: url(../img/logo.png);
+      background-size: 210px 145px;
+      background-repeat: no-repeat;
+      height: 145px;
+      width: 210px;
+      left: 20px;
+      bottom: 20px; }
+    #top .put .alt_nav {
+      width: auto;
+      right: 20px;
+      bottom: 50px; }
+      #top .put .alt_nav p {
+        text-align: left; }
+    #top .put .cat_nav div {
+      position: absolute;
+      width: 33.33333%;
+      margin-bottom: 0px; }
+      #top .put .cat_nav div:nth-child(1) {
+        top: 0px;
+        left: 0px; }
+      #top .put .cat_nav div:nth-child(2) {
+        top: 0px;
+        left: 33.333333%; }
+      #top .put .cat_nav div:nth-child(3) {
+        top: 0px;
+        left: 66.666666%; }
+      #top .put .cat_nav div:nth-child(4) {
+        top: 50px;
+        left: 0px; }
+      #top .put .cat_nav div:nth-child(5) {
+        top: 50px;
+        left: 33.333333%; }
+      #top .put .cat_nav div:nth-child(6) {
+        top: 50px;
+        left: 66.666666%; }
+
+  #carousel #front > div {
+    height: 600px;
+    padding: 200px 0; }
+  #carousel #grid {
+    padding-top: 80px; }
+    #carousel #grid #grid_inside {
+      padding: 0px 10px; }
+      #carousel #grid #grid_inside > div {
+        position: relative;
+        float: left;
+        width: 33.33333%;
+        margin: 0px;
+        padding: 10px;
+        cursor: pointer; }
+        #carousel #grid #grid_inside > div > div > div {
+          position: absolute;
+          height: 80%;
+          width: 80%;
+          top: 50%;
+          left: 50%;
+          margin: -40% 0px 0px -40%;
+          background-color: black;
+          border-radius: 100%;
+          display: none; }
+          #carousel #grid #grid_inside > div > div > div p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            line-height: 18px; }
+            #carousel #grid #grid_inside > div > div > div p span {
+              font-family: stix; }
+  #carousel #project {
+    padding-top: 80px; }
+    #carousel #project .proj_img {
+      height: 500px; } }
+@media screen and (min-width: 1024px) {
+  #top {
+    height: 200px;
+    position: fixed;
+    width: 100%;
+    z-index: 100; }
+    #top .put .logo {
+      background-image: url(../img/logo.png);
+      background-size: 210px 145px;
+      background-repeat: no-repeat;
+      height: 145px;
+      width: 210px;
+      left: 20px;
+      bottom: 20px; }
+    #top .put .cat_nav div {
+      width: 16.66667%;
+      position: relative;
+      top: inherit !important;
+      left: inherit !important; }
+
+  #carousel #grid {
+    padding-top: 40px; }
+    #carousel #grid #grid_inside {
+      padding: 0px 16.66667%; }
+      #carousel #grid #grid_inside > div {
+        position: relative;
+        float: left;
+        width: 25%;
+        cursor: pointer; }
+        #carousel #grid #grid_inside > div:hover div > div {
+          display: table; }
+  #carousel #project {
+    padding-top: 40px; }
+  #carousel > div {
+    overflow: scroll; } }
 @-moz-document url-prefix() {}

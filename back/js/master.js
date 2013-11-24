@@ -141,15 +141,15 @@ function proj_select(){
 				},
 				url: "php/getproject.php"
 			}).done( function(proj){
-				console.log(proj)
-
 				current_proj = proj.details;
+
+				console.log(current_proj);
 
 				$detail.addClass('active')
 				$that.addClass('selected').siblings().removeClass('selected')
 
-				if (proj.details.frontpromoted === '1') $('.proj_frontpromotion').addClass('promoted')
-				else $('.proj_frontpromotion').removeClass('promoted')
+				// if (proj.details.frontpromoted === '1') $('.proj_frontpromotion').addClass('promoted')
+				// else $('.proj_frontpromotion').removeClass('promoted')
 
 				if (proj.details.allprojpromoted === '1') $('.proj_allprojpromotion').addClass('promoted')
 				else $('.proj_allprojpromotion').removeClass('promoted')
@@ -264,7 +264,7 @@ $('#save').on('click', function(){
 				text: $('#proj_text').val(),
 				tile: $('.yeahthistile1').parent().data('img'),
 				tilepath: andthisisitspath,
-				frontpromote:$('.proj_frontpromotion').hasClass('promoted'),
+				// frontpromote:$('.proj_frontpromotion').hasClass('promoted'),
 				allprojpromote:$('.proj_allprojpromotion').hasClass('promoted'),
 				imgs:imgsession,
 				order:theOrder

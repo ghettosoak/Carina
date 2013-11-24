@@ -1,0 +1,12 @@
+#grid{
+	padding-top:40px;
+	#grid_inside{
+		padding:0px 16.66667%;
+		&>div{
+			@include prfl;
+			width:25%;
+			cursor: pointer;
+			&:hover div>div{display:table;}
+		}	
+	}
+}

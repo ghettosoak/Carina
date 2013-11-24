@@ -1,12 +1,68 @@
-.top{
-	height:125px;
-	position:fixed;
+#top{
+	height:$distancefromtop;
+	position:absolute;
 	width:100%;
 	z-index:100;
 	.put{
 		margin:auto;
 		max-width:$masterwidth;
 		height:100%;
-		position:relative;
+		// position:relative;
+		.logo, .alt_nav{
+			position:absolute;
+			width:100%;
+		}
+		.logo{
+			background-image:url(../img/logo.png);
+			background-size: 150px auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 145px;
+			width: 100%;
+			left: 0px;
+		}
+		.alt_nav{
+			bottom:24px;
+			p{
+				text-align:center;
+				font-size:16px;
+				span{
+					cursor:pointer;
+					margin:0px 10px;
+				}
+			}
+		}
+		.cat_nav{
+			position:absolute;
+			width:100%;
+			height:12px;
+			bottom:0px;
+			left:0px;
+			opacity:0;
+			div{
+				width:100%;
+				height:100%;
+				position:relative;
+				float:left;
+				@include transition(0.25);
+				cursor: pointer;
+				margin-bottom:40px;
+				p{
+					position:absolute;
+					bottom:-35px;
+					width:100%;
+					text-align: center;
+					font-family: stix;
+					font-size:16px;
+				}
+
+				&:nth-child(1){background-color:$thelightgreen;   color:$thelightgreen;}
+				&:nth-child(2){background-color:$thedarkmagenta;  color:$thedarkmagenta;}
+				&:nth-child(3){background-color:$thelightmagenta; color:$thelightmagenta;}
+				&:nth-child(4){background-color:$thedarkgreen;    color:$thedarkgreen;}
+				&:nth-child(5){background-color:$thedarkyellow;   color:$thedarkyellow;}
+				&:nth-child(6){background-color:$thelightyellow;  color:$thelightyellow;}
+			}
+		}
 	}
 }

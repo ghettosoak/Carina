@@ -11,7 +11,11 @@
 
 @import "sass/mobile/_mobile";
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
+	@import "sass/tablet/_tablet";
+}
+
+@media screen and (min-width: 1024px) {
 	@import "sass/desktop/_desktop";
 }
 

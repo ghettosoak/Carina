@@ -26,15 +26,15 @@
 				<div class="cat" data-pointer="my_proj"><p>My Projects</p><div data-pointer="3" class="inside coverimg"></div></div>
 				<div class="cat" data-pointer="posters"><p>Posters</p><div data-pointer="4" class="inside coverimg"></div></div>
 				<div class="cat" data-pointer="logos"><p>Logos</p><div data-pointer="5" class="inside coverimg"></div></div>
-				<div class="cat" data-pointer="corporate_pub"><p>Corporate Publication</p><div data-pointer="6" class="inside coverimg"></div></div>
+				<div class="cat" data-pointer="publication"><p>Publication</p><div data-pointer="6" class="inside coverimg"></div></div>
 				<div class="cat" data-pointer="signage"><p>Signage</p><div data-pointer="7" class="inside coverimg"></div></div>
 				<div class="cat" data-pointer="websites"><p>Websites</p><div data-pointer="8" class="inside coverimg"></div></div>
 			</div>
 			<div class="project">
 			</div>
 			<div class="detail">
-				<p>promoted to front</p>
-				<span class="proj_frontpromotion promoter"></span>
+				<!-- <p>promoted to front</p>
+				<span class="proj_frontpromotion promoter"></span> -->
 				<p>promoted on all projects</p>
 				<span class="proj_allprojpromotion promoter"></span>
 				<p>project name</p>

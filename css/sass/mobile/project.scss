@@ -1,7 +1,8 @@
 #project{
+	padding-top:290px;
 	.proj_img{
-		position:relative;
-		height:500px;
+		position:relative; 
+		height:200px;
 		width:80%;
 		margin:auto;
 		overflow-x:hidden;
@@ -9,10 +10,7 @@
 			position:absolute;
 			height:100%;
 			left:0px;
-			-webkit-transition: all 0.25s ease-in-out;
-			-moz-transition: all 0.25s ease-in-out;
-			-o-transition: all 0.25s ease-in-out;
-			transition: all 0.25s ease-in-out;
+			@include transition(0.25);
 			div{
 				@include prfl;
 				height:100%;
@@ -30,10 +28,7 @@
 			width:16.66667%;
 			height:100%;
 			@include prfl;
-			-webkit-transition: all 0.25s ease-in-out;
-			-moz-transition: all 0.25s ease-in-out;
-			-o-transition: all 0.25s ease-in-out;
-			transition: all 0.25s ease-in-out;
+			@include transition(0.25);
 			cursor: pointer;
 			p{
 				position:absolute;
@@ -57,9 +52,8 @@
 		}
 	}	
 
-	p{
-		text-align: center;
-	}
+	p{text-align: center;}
+	
 	.client{
 		font-family: stix;
 		font-size:16px;
@@ -70,6 +64,6 @@
 		margin-bottom:15px;
 	}
 	.text{
-
+		margin-bottom:100px;
 	}
 }

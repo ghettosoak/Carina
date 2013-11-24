@@ -1,8 +1,9 @@
 #front{
-	&>div:not(.top_spacer){
+	&>div{
+		height:300px;
 		width:100%;
 		position: relative;
-		padding:140px 0;
+		padding:100px 0px;
 		overflow:hidden;
 		.back{
 			height:150%;
@@ -70,7 +71,7 @@
 
 		&.here .sec_color{
 			position:fixed;
-			top:125px;
+			top:$distancefromtop;
 		}
 	}	
 }

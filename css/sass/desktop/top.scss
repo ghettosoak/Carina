@@ -1,0 +1,27 @@
+#top{
+	height:$distancefromtop;
+	position:fixed;
+	width:100%;
+	z-index:100;
+	.put{
+		.logo{
+			background-image:url(../img/logo.png);
+			background-size:210px 145px;
+			background-repeat: no-repeat;
+			height:145px;
+			width:210px;
+			left:20px;
+			bottom:20px;
+		}
+		.alt_nav{
+		}
+		.cat_nav{
+			div{
+				width:16.66667%;
+				position:relative;
+				top:inherit !important;
+				left:inherit !important;
+			}
+		}
+	}
+}

@@ -1,20 +1,14 @@
 #grid{
-	padding-top:290px;
+	padding-top:80px;
 	#grid_inside{
 		padding:0px 10px;
-		@include prfl;
-		width:100%;
 		&>div{
 			@include prfl;
-			width:100%;
-			margin:0px 0px 10px;
+			width:33.33333%;
+			margin:0px;
+			padding:10px;
 			cursor: pointer;
 			&>div{
-				@include prfl;
-				height:100%;
-				width:100%;
-				background-position:center center;
-				background-size:cover;
 				
 				&>div{
 					position:absolute;
@@ -38,7 +32,7 @@
 						}
 					}
 				}
-			}	
-		}
+			}
+		}		
 	}
 }

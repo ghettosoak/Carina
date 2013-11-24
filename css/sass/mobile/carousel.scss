@@ -1,0 +1,18 @@
+#carousel{
+	width:300%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	padding-top:200px;
+	opacity:0;
+	&>div{
+		height:100%;
+		width:33.33333333%;
+		@include prfl;
+		// overflow:scroll;
+	}
+
+	@import "front";
+	@import "grid";
+	@import "project";
+}

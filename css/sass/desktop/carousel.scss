@@ -1,0 +1,9 @@
+#carousel{
+	@import "front";
+	@import "grid";
+	@import "project";
+
+	&>div{
+		overflow:scroll;
+	}
+}
