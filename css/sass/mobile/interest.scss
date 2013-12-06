@@ -1,6 +1,17 @@
 #interest{
-	position:fixed;
-	height:100%;
-	width:100%;
-	top:100%;
+	.about_img, .about_text{
+		position: relative;
+	}
+
+	.about_img{
+		margin: auto;
+		display: block;
+		width: 80%;
+		height: auto;
+	}
+	p{
+		text-align: center;
+		margin-top: 60px;
+		a{color:black;}
+	}
 }

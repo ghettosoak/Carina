@@ -76,31 +76,67 @@ body {
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     opacity: 1; }
-  #master.lookingat_interest #interest {
-    top: 0px; }
   #master.lookingat_interest #carousel {
-    top: -100%; }
-  #master.lookingat_front #top .cat_nav {
-    left: 100%; }
-  #master.lookingat_front #carousel {
     left: 0px; }
-  #master.lookingat_grid #carousel {
+  #master.lookingat_front #carousel {
     left: -100%; }
-  #master.lookingat_project #carousel {
+  #master.lookingat_grid #carousel {
     left: -200%; }
-  #master.lookingat_project #top .cat_nav div p {
-    display: none; }
-  #master.lookingat_project.category-my_proj #top .cat_nav:nth-child(1) p {
+  #master.lookingat_grid #top .cat_nav {
+    left: 0px; }
+  #master.lookingat_project #carousel {
+    left: -300%; }
+  #master.lookingat_project #top .cat_nav {
+    left: 0px; }
+    #master.lookingat_project #top .cat_nav div p {
+      display: none; }
+  #master.lookingat_project.category-my_proj ::selection {
+    color: white;
+    background-color: #0d7e8d; }
+  #master.lookingat_project.category-my_proj ::-moz-selection {
+    color: white;
+    background-color: #0d7e8d; }
+  #master.lookingat_project.category-my_proj #top .cat_nav div:nth-child(1) p {
     display: block !important; }
-  #master.lookingat_project.category-posters #top .cat_nav:nth-child(2) p {
+  #master.lookingat_project.category-posters ::selection {
+    color: white;
+    background-color: #730b40; }
+  #master.lookingat_project.category-posters ::-moz-selection {
+    color: white;
+    background-color: #730b40; }
+  #master.lookingat_project.category-posters #top .cat_nav div:nth-child(2) p {
     display: block !important; }
-  #master.lookingat_project.category-logos #top .cat_nav:nth-child(3) p {
+  #master.lookingat_project.category-logos ::selection {
+    color: white;
+    background-color: #c02574; }
+  #master.lookingat_project.category-logos ::-moz-selection {
+    color: white;
+    background-color: #c02574; }
+  #master.lookingat_project.category-logos #top .cat_nav div:nth-child(3) p {
     display: block !important; }
-  #master.lookingat_project.category-publication #top .cat_nav:nth-child(4) p {
+  #master.lookingat_project.category-publication ::selection {
+    color: white;
+    background-color: #106873; }
+  #master.lookingat_project.category-publication ::-moz-selection {
+    color: white;
+    background-color: #106873; }
+  #master.lookingat_project.category-publication #top .cat_nav div:nth-child(4) p {
     display: block !important; }
-  #master.lookingat_project.category-signage #top .cat_nav:nth-child(5) p {
+  #master.lookingat_project.category-signage ::selection {
+    color: white;
+    background-color: #cbba3b; }
+  #master.lookingat_project.category-signage ::-moz-selection {
+    color: white;
+    background-color: #cbba3b; }
+  #master.lookingat_project.category-signage #top .cat_nav div:nth-child(5) p {
     display: block !important; }
-  #master.lookingat_project.category-websites #top .cat_nav:nth-child(6) p {
+  #master.lookingat_project.category-websites ::selection {
+    color: black;
+    background-color: #eccb24; }
+  #master.lookingat_project.category-websites ::-moz-selection {
+    color: black;
+    background-color: #eccb24; }
+  #master.lookingat_project.category-websites #top .cat_nav div:nth-child(6) p {
     display: block !important; }
 
 .hiding {
@@ -118,14 +154,15 @@ body {
     #top .put .logo, #top .put .alt_nav {
       position: absolute;
       width: 100%; }
-    #top .put .logo {
+    #top .put #logo {
       background-image: url(../img/logo.png);
       background-size: 150px auto;
       background-repeat: no-repeat;
       background-position: center center;
       height: 145px;
       width: 100%;
-      left: 0px; }
+      left: 0px;
+      cursor: pointer; }
     #top .put .alt_nav {
       bottom: 24px; }
       #top .put .alt_nav p {
@@ -139,7 +176,7 @@ body {
       width: 100%;
       height: 12px;
       bottom: 0px;
-      left: 0px;
+      left: 100%;
       opacity: 0; }
       #top .put .cat_nav div {
         width: 100%;
@@ -178,24 +215,30 @@ body {
           background-color: #eccb24;
           color: #eccb24; }
 
-#interest {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 100%; }
-
 #carousel {
-  width: 300%;
+  width: 400%;
   height: 100%;
   position: absolute;
   left: 0px;
   padding-top: 200px;
-  opacity: 0; }
+  opacity: 0;
+  overflow: hidden; }
   #carousel > div {
-    height: 100%;
-    width: 33.33333333%;
+    width: 25%;
     position: relative;
     float: left; }
+  #carousel #interest .about_img, #carousel #interest .about_text {
+    position: relative; }
+  #carousel #interest .about_img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: auto; }
+  #carousel #interest p {
+    text-align: center;
+    margin-top: 60px; }
+    #carousel #interest p a {
+      color: black; }
   #carousel #front > div {
     height: 300px;
     width: 100%;
@@ -383,7 +426,7 @@ body {
     height: 200px;
     width: 100%;
     z-index: 100; }
-    #top .put .logo {
+    #top .put #logo {
       background-image: url(../img/logo.png);
       background-size: 210px 145px;
       background-repeat: no-repeat;
@@ -463,7 +506,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 100; }
-    #top .put .logo {
+    #top .put #logo {
       background-image: url(../img/logo.png);
       background-size: 210px 145px;
       background-repeat: no-repeat;
@@ -471,25 +514,30 @@ body {
       width: 210px;
       left: 20px;
       bottom: 20px; }
-    #top .put .cat_nav div {
-      width: 16.66667%;
-      position: relative;
-      top: inherit !important;
-      left: inherit !important; }
-
-  #carousel #grid {
-    padding-top: 40px; }
-    #carousel #grid #grid_inside {
-      padding: 0px 16.66667%; }
-      #carousel #grid #grid_inside > div {
+    #top .put .cat_nav {
+      left: 50%; }
+      #top .put .cat_nav div {
+        width: 16.66667%;
         position: relative;
-        float: left;
-        width: 25%;
-        cursor: pointer; }
-        #carousel #grid #grid_inside > div:hover div > div {
-          display: table; }
-  #carousel #project {
-    padding-top: 40px; }
-  #carousel > div {
-    overflow: scroll; } }
+        top: inherit !important;
+        left: inherit !important; }
+
+  #carousel {
+    overflow: initial; }
+    #carousel #grid {
+      padding-top: 40px; }
+      #carousel #grid #grid_inside {
+        padding: 0px 16.66667%; }
+        #carousel #grid #grid_inside > div {
+          position: relative;
+          float: left;
+          width: 25%;
+          cursor: pointer; }
+          #carousel #grid #grid_inside > div:hover div > div {
+            display: table; }
+    #carousel #project {
+      padding-top: 40px; }
+    #carousel > div {
+      height: 100%;
+      overflow: scroll; } }
 @-moz-document url-prefix() {}

@@ -39,4 +39,14 @@ $distancefromtop: 200px;
 	transition: all $time ease-in-out;
 }
 
+@mixin select($t_color, $bg_color){
+	::selection {
+		color:$t_color;
+		background-color:$bg_color;
+	}
 
+	::-moz-selection {
+		color:$t_color;
+		background-color:$bg_color;
+	}
+}

@@ -19,32 +19,38 @@ body{
 	}
 
 	&.lookingat_interest{
-		#interest{
-			top:0px;
-		}
-		#carousel{
-			top:-100%;
-		}
+		#carousel{ left:0px; }
 	}
 
 	&.lookingat_front{
-		#top{
-			.cat_nav{
-				left:100%;
-			}
-		}
-		#carousel{left:0px;}
+		
+		#carousel{left:-100%;}
 	}
-	&.lookingat_grid #carousel{left:-100%;}
-	&.lookingat_project{
+
+	&.lookingat_grid{
 		#carousel{left:-200%;}
-		#top .cat_nav div p{display:none;}
-		&.category-my_proj #top .cat_nav:nth-child(1) p{display:block !important;}
-		&.category-posters #top .cat_nav:nth-child(2) p{display:block !important;}
-		&.category-logos #top .cat_nav:nth-child(3) p{display:block !important;}
-		&.category-publication #top .cat_nav:nth-child(4) p{display:block !important;}
-		&.category-signage #top .cat_nav:nth-child(5) p{display:block !important;}
-		&.category-websites #top .cat_nav:nth-child(6) p{display:block !important;}
+		#top .cat_nav{ left:0px; }
+	}
+
+	&.lookingat_project{
+		#carousel{left:-300%;}
+		#top .cat_nav{
+			left:0px;
+			div p{display:none;}
+		}
+
+		&.category-my_proj{ @include select( white, $thelightgreen); 
+			#top .cat_nav div:nth-child(1) p{display:block !important;}}
+		&.category-posters{ @include select( white, $thedarkmagenta); 
+			#top .cat_nav div:nth-child(2) p{display:block !important;}}
+		&.category-logos{ @include select( white, $thelightmagenta); 
+			#top .cat_nav div:nth-child(3) p{display:block !important;}}
+		&.category-publication{ @include select( white, $thedarkgreen); 
+			#top .cat_nav div:nth-child(4) p{display:block !important;}}
+		&.category-signage{ @include select( white, $thedarkyellow); 
+			#top .cat_nav div:nth-child(5) p{display:block !important;}}
+		&.category-websites{ @include select( black, $thelightyellow); 
+			#top .cat_nav div:nth-child(6) p{display:block !important;}}
 	}
 }
 
@@ -52,7 +58,6 @@ body{
 
 @import "top";
 
-@import "interest";
 @import "carousel";
 
 .bottom{

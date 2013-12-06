@@ -1,9 +1,11 @@
 #carousel{
+	overflow:initial;
 	@import "front";
 	@import "grid";
 	@import "project";
 
 	&>div{
+		height:100%;
 		overflow:scroll;
 	}
 }

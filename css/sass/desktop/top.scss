@@ -4,7 +4,7 @@
 	width:100%;
 	z-index:100;
 	.put{
-		.logo{
+		#logo{
 			background-image:url(../img/logo.png);
 			background-size:210px 145px;
 			background-repeat: no-repeat;
@@ -16,6 +16,7 @@
 		.alt_nav{
 		}
 		.cat_nav{
+			left:50%;
 			div{
 				width:16.66667%;
 				position:relative;

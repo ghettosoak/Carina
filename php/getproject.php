@@ -3,7 +3,7 @@ include('help/delicious.php');
 
 $projnum = $_REQUEST['project'];
 
-$returnedproject = mysql_query("select name, client, text from project where id = '".$projnum."'");
+$returnedproject = mysql_query("select category, name, client, text from project where id = '".$projnum."'");
 $projimgs = mysql_query("select path from images where project = '".$projnum."'");
 
 $theproject = array();

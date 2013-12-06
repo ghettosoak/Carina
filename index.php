@@ -15,7 +15,7 @@
 	<div id="master">
 		<div id="top">
 			<div class="put">
-				<div class="logo"></div>
+				<div id="logo"></div>
 				<div class="alt_nav">
 					<p>
 						/ <span data-pointer="all_proj">Work</span>
@@ -34,10 +34,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="interest">
-			<p>HEY</p>
-		</div>
+		
 		<div id="carousel" class="">
+			<div id="interest">
+				<p>HEY</p>
+			</div>
 			<div id="front" class="">
 				<div id="sec01">
 					<div id="slide01" class="back" data-category="my_proj"></div>
@@ -88,7 +89,7 @@
 			</div>
 			<div id="grid">
 				<div id="grid_inside"></div>
-			</div>  
+			</div>
 			<div id="project">
 			</div>
 		</div>
