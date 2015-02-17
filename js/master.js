@@ -2,7 +2,7 @@
 (function(){try{console.log();return window.console;}catch(a){return (window.console={});}}());
 
 //jquery v1.8.0 is included in this mess. Copyright 2012 jQuery Foundation and other contributors.
-//like something you see, but can't read this unholy mess? drop me a line at (mif)[at](awe)[minus](schaffhausen)[dot](com)
+//like something you see, but can't read this unholy mess? drop me a line at (mike)[at](mfischerdesign)[dot](com)
 
 var $windowPane = $(window);
 var $theSections;
@@ -11,6 +11,7 @@ var sectionHeight;
 var paneMode = {};
 var depth = 0, panel = 0, panelreg = 0, position = 0;
 var large;
+var $body = $('body');
 var $master = $('#master');
 var $top = $('#top');
 var $front = $('#front');
@@ -52,7 +53,7 @@ var projectReprepare = _.debounce(function(){
 	if (hash.indexOf('category') === 0) gridEnsure();
 	if (hash.indexOf('project') === 0){
 		projectPrepare($project);
-		$proj_img_carousel.css('left', -galleryposition*$proj_img_carousel.parent().width());
+		$proj_img_carousel.css('left', -(galleryposition - 1) * $proj_img_carousel.parent().width());
 	}
 },250)
 
@@ -96,7 +97,7 @@ function arewethereyet(acategory){
 			if (hash.indexOf('about') === 0 || hash.indexOf('contact') === 0) grip = $interest.outerHeight(true) + 200
 			if (hash.indexOf('home') === 0) grip = $front.outerHeight(true) + 200
 			if (hash.indexOf('category') === 0 || hash.indexOf('all_proj') === 0) grip = $grid.find('#grid_inside').outerHeight(true) + 500
-			if (hash.indexOf('project') === 0) grip = $project.outerHeight(true) + 300
+			if (hash.indexOf('project') === 0) grip = $project.outerHeight(true) + 194
 
 			$carousel.css('height', grip);	
 		}, 1000)
@@ -252,17 +253,39 @@ function projectPrepare($thisone){
 	$projimgs.css('width', $proj_img_carousel.parent().width())
 
 	$proj_img_select.find('p').each(function(e){
-		$(this).html(e+1)
+		$(this).html(e+1) 
 	})
 
 	$proj_img_select.find('div').off().on('click', function(){
-		galleryposition = $(this).index()
+		var $that = $(this)
+
+		$that.addClass('selected')
+			.siblings().removeClass('selected')
+
+		galleryposition = $(this).index();
 		$proj_img_carousel.css('left', -galleryposition*$proj_img_carousel.parent().width())
 	})
 }
 
+$body.on('keyup', function(e){
+	if (
+		e.keyCode === 37 ||
+		e.keyCode === 39
+	){
+		if ($master.hasClass('lookingat_project')){
+			if (e.keyCode === 37){ // LEFT
+				console.log(e.keyCode)
+				$proj_img_select.find('.selected').prev().click()
+			}
+			else if (e.keyCode === 39){ // LEFT
+				console.log(e.keyCode)
+				$proj_img_select.find('.selected').next().click()
+			}
+		}		
+	}
+})
+
 function shifter(there){
-	console.log(there)
     panel = (Math.floor(there / sectionHeight))+1;
     position = (there % sectionHeight);
 
@@ -272,8 +295,6 @@ function shifter(there){
     }
 
     panelreg = panel;
-
-    console.log(there+' // '+panel+' // '+ position)
 
     // CURRENT
     $('#slide0'+panel).css('top', map_range(position, 0, sectionHeight, -25, 0)+'%');

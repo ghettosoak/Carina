@@ -9,9 +9,21 @@
 		width: 80%;
 		height: auto;
 	}
+
+	.about_text{
+		white-space: pre-wrap;
+		padding: 0 20%;
+	}
+
 	p{
 		text-align: center;
 		margin-top: 60px;
 		a{color:black;}
+	}
+
+	.about_email a,
+	.about_phone a,
+	.about_cv a{
+		border-bottom: dotted 1px black;
 	}
 }

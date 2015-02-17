@@ -8,6 +8,7 @@ $category = $_REQUEST['category'];
 $name = $_REQUEST['name'];
 $client = $_REQUEST['client'];
 $text = $_REQUEST['text'];
+$contrib = $_REQUEST['contrib'];
 $tile = $_REQUEST['tile'];
 $tilepath = $_REQUEST['tilepath'];
 $frontpromotion = $_REQUEST['frontpromote'];
@@ -35,6 +36,7 @@ mysql_query('update project set
 	name = "'.$name.'",
 	client = "'.$client.'",
 	text = "'.$text.'",
+	contrib = "'.$contrib.'",
 	allprojpromoted = "'.$allprojpromotion.'",
  	tilepath = "'.$tilepath.'"
 	where id = "'.$whichproj.'"');

@@ -1,18 +1,23 @@
 <?php
 include('help/delicious.php');
 
-$thecontact = mysql_query('select email, phone, cv from her');
+$thecontact = mysql_query('select email, phone from her');
+$theCV = mysql_query('select path from covers where id = 1');
+
 
 $contact = array();
 $contact['contact'] = array();
 
-while ($acontact = mysql_fetch_array($thecontact)){
+while ($anaboutCV = mysql_fetch_array($theCV)){
 
-	$contact['contact'][] = array(
-		"email" => $acontact['email'], 
-		"phone" => $acontact['phone'],
-		"cv" => $acontact['cv']
-	);
+	while ($acontact = mysql_fetch_array($thecontact)){
+
+		$contact['contact'][] = array(
+			"email" => $acontact['email'], 
+			"phone" => $acontact['phone']
+		);
+	}
+
 }
 
 echo json_encode($contact);

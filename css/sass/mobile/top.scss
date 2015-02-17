@@ -24,6 +24,7 @@
 		}
 		.alt_nav{
 			bottom:24px;
+			right: 0;
 			p{
 				text-align:center;
 				font-size:16px;
@@ -55,6 +56,10 @@
 					text-align: center;
 					font-family: stix;
 					font-size:16px;
+
+					@media screen and (min-width: 1024px) {
+						bottom: 5px;
+					}
 				}
 
 				&:nth-child(1){background-color:$thelightgreen;   color:$thelightgreen;}
@@ -63,6 +68,10 @@
 				&:nth-child(4){background-color:$thedarkgreen;    color:$thedarkgreen;}
 				&:nth-child(5){background-color:$thedarkyellow;   color:$thedarkyellow;}
 				&:nth-child(6){background-color:$thelightyellow;  color:$thelightyellow;}
+
+				&:hover p{
+					display: block !important;
+				}
 			}
 		}
 	}

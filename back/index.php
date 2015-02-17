@@ -9,7 +9,7 @@
     <title>Carina Stucki Data Swallow</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="type/type.css"/>
-    <link rel="stylesheet" type="text/css" href="css/master.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css?=v2" />
 
     <!--<script type="text/javascript" src="js/lib/jquery.js"></script>-->
 </head>
@@ -17,7 +17,7 @@
 <body>
 	<div class="master">
 		<div class="head">
-			<div id="title"><p>carinastucki.ch data swallow v001</p></div>
+			<div id="title"><p>carinastucki.ch data swallow v1.0.3</p></div>
 			<div id="save" class="selected"><p>save</p></div>
 		</div>
 		<div class="body">
@@ -43,7 +43,9 @@
 				<input id="proj_client"></input>
 				<p>project text</p>
 				<textarea id="proj_text"></textarea>
-				<p>project images</p>
+				<p>project contribution</p>
+				<input id="proj_contrib"></input>
+				<p>project images <span>&nbsp;&nbsp;&nbsp;pls hold, going to space</span></p>
 				<div id="proj_img">
 				</div>
 			</div>
@@ -73,6 +75,6 @@
 		</div>
 		
 	</div>
-<script type="text/javascript" src="js/master-m.js"></script>
+<script type="text/javascript" src="js/master-m.js?2"></script>
 </body>
 </html>

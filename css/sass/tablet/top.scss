@@ -11,7 +11,8 @@
 			height:145px;
 			width:210px;
 			left:20px;
-			bottom:20px;
+			top:20px;
+			position: relative;
 		}
 		.alt_nav{
 			width:auto;
@@ -31,6 +32,10 @@
 				&:nth-child(4){top: 50px; left: 0px;}
 				&:nth-child(5){top: 50px; left: 33.333333%;}
 				&:nth-child(6){top: 50px; left: 66.666666%;}
+
+				p{
+					display: none;
+				}
 			}
 		}
 	}

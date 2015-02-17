@@ -145,6 +145,7 @@ a{
 				right:15px;
 				top:12.5px;
 				display:none;
+				z-index: 10;
 			}
 			&:hover .proj_kill{display:block;}
 		}
@@ -167,6 +168,11 @@ a{
 			font-size:11px;
 			width:100%;
 			float:left;
+
+			span{
+				display: none;
+				font-weight: bold;
+			}
 		}
 
 		.promoter{

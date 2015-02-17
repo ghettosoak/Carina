@@ -22,17 +22,22 @@
 			p{
 				position:absolute;
 				left:60%;
-				padding:30px;
+				padding:10px 30px;
 				font-size:24px;
 				cursor: pointer;
+				color:white;
+
+				&:hover{
+					background-color: white !important;
+				}
+
 				span{
-					color:white;
 					@include stix;
 				}
 			}
 		}
 		.sec_color{
-			height:16px;
+			height:12px;
 			width:100%;
 			position:absolute;
 			top:0px;
@@ -40,38 +45,56 @@
 		}
 		&#sec01{
 			z-index:1; 
-			color:$thelightgreen;
+			p{
+				background-color:$thelightgreen;
+				&:hover{ color: $thelightgreen !important;}
+			}
 			.sec_color{background-color:$thelightgreen;}
 		}
 		&#sec02{
 			z-index:2; 
-			color:$thedarkmagenta;
+			p{
+				background-color:$thedarkmagenta;
+				&:hover{ color: $thedarkmagenta !important;}
+			}
 			.sec_color{background-color:$thedarkmagenta;}
 		}
 		&#sec03{
 			z-index:3; 
-			color:$thelightmagenta;
+			p{
+				background-color:$thelightmagenta;
+				&:hover{ color: $thelightmagenta !important;}
+			}
 			.sec_color{background-color:$thelightmagenta;}
 		}
 		&#sec04{
 			z-index:4; 
-			color:$thedarkgreen;
+			p{
+				background-color:$thedarkgreen;
+				&:hover{ color: $thedarkgreen !important;}
+			}
 			.sec_color{background-color:$thedarkgreen;}
 		}
 		&#sec05{
 			z-index:5; 
-			color:$thedarkyellow;
+			p{
+				background-color:$thedarkyellow;
+				&:hover{ color: $thedarkyellow !important;}
+			}
 			.sec_color{background-color:$thedarkyellow;}
 		}
 		&#sec06{
 			z-index:6; 
-			color:$thelightyellow;
+			p{
+				background-color:$thelightyellow;
+				&:hover{ color: $thelightyellow !important;}
+			}
 			.sec_color{background-color:$thelightyellow;}
 		}
 
 		&.here .sec_color{
 			position:fixed;
-			top:$distancefromtop;
+			top:$distancefromtop - 12;
 		}
 	}	
 }

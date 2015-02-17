@@ -131,6 +131,7 @@ function proj_select(){
 	$project.off().on('click', 'div', function(){
 		var $that = $(this)
 		nowediting = $that.data('pointer')
+		console.log(nowediting)
 
 		if (nowediting !== 'NEW'){
 			$.ajax({
@@ -142,6 +143,8 @@ function proj_select(){
 				url: "php/getproject.php"
 			}).done( function(proj){
 				current_proj = proj.details;
+
+				if (current_proj.img === undefined) current_proj.img = [];
 
 				console.log(current_proj);
 
@@ -157,6 +160,7 @@ function proj_select(){
 				$('#proj_name').val(proj.details.name)
 				$('#proj_client').val(proj.details.client)
 				$('#proj_text').val(proj.details.text)
+				$('#proj_contrib').val(proj.details.contrib)
 
 				$('#proj_img').empty()
 
@@ -185,7 +189,6 @@ function proj_select(){
 						.parent().siblings().find('.img_tile').removeClass('yeahthistile1')
 					})
 				})
-				
 			})
 		}else{ //ADD PROJECT
 			$.ajax({
@@ -200,6 +203,7 @@ function proj_select(){
 				$('#proj_name').val('')
 				$('#proj_client').val('')
 				$('#proj_text').val('')
+				$('#proj_contrib').val('')
 				$('#proj_img').empty()
 
 				$category.find('[data-pointer="'+current_category+'"]').click()
@@ -243,9 +247,12 @@ $('#save').on('click', function(){
 		var thisisthetitleimage = $('.yeahthistile1').parent().data('img')
 		var andthisisitspath;
 
-		$.each(current_proj.img, function(e, i){
-			if (i.id == thisisthetitleimage) andthisisitspath = i.path.split('/')[2];
-		})
+		if (current_proj.img !== undefined){
+			$.each(current_proj.img, function(e, i){
+				console.log(i)
+				if (i.id == thisisthetitleimage) andthisisitspath = i.path.split('/')[2];
+			})
+		}
 
 		var theOrder = [];
 		$project.find('div').each(function(e){
@@ -262,6 +269,7 @@ $('#save').on('click', function(){
 				name: $('#proj_name').val(),
 				client: $('#proj_client').val(),
 				text: $('#proj_text').val(),
+				contrib: $('#proj_contrib').val(),
 				tile: $('.yeahthistile1').parent().data('img'),
 				tilepath: andthisisitspath,
 				// frontpromote:$('.proj_frontpromotion').hasClass('promoted'),
@@ -292,29 +300,66 @@ $('#proj_img').filedrop({
 	fallback_id: 'me',
 	paramname:'me_image',
 	
-	url: 'php/img_put.php',
-	maxfilesize: 20,
+	url: 'php/img_put.php', 
+	maxfilesize: 200,
 
-	data:{ proj: nowediting },
+	data:{ 
+		proj: function(){
+            return nowediting;
+        }
+	},
+
+	uploadStarted:function(i, file, len){
+		$('#proj_img').prev('p').find('span').show();	
+	},
 	
 	uploadFinished:function(i,file,response){
+		$('#proj_img').prev('p').find('span').hide();	
 
-		$('#meimgs').find('div').last().attr('data-img', response.img_id); 
+		var preview = $('<div data-img="' + response.img_id + '" style="background-image:url(' + response.path + '.jpg)"></div>')
+		var reader = new FileReader();
+		
+		reader.onload = function(e){
+			// preview.css('background-image','url('+e.target.result+')');
+		};
+		reader.readAsDataURL(file);
+		preview.appendTo('#proj_img');
+		preview.append('<img src="../back/img/kill.png" class="img_kill" />')
+		preview.append('<img src="img/cover.png" class="img_tile yeahthistile" />')
+		$.data(file,preview);	
 
-		$('.img_kill').css('z-index','1000').on('click', function(){
-			var $waitme = $(this).parent()
-			var $thisone = $waitme.data('img');
+		console.log(i)
+		console.log(file)
+		console.log(response)
+
+		// $('#proj_img').find('div').last().attr('data-img', response.img_id); 
+
+		$('.img_kill').off().on('click', function(e){
+			var $that = $(this)
 			$.ajax({
 				type: "POST",
 				dataType:'JSON',
-				data:{kill: $thisone},
-				url: "../back/php/killmeimg.php"
-			}).done(function(){
-				$waitme.remove();
+				data:{
+					kill:$that.parent().data('img')
+				},
+				url: "php/img_delete.php"
+			}).done( function(youarehere){
+				$that.parent().remove();
 			})
-		});
+		})
+
+		$('.img_tile').off().on('click', function(e){
+			var $that = $(this);
+			$that.addClass('yeahthistile1')
+			.parent().siblings().find('.img_tile').removeClass('yeahthistile1')
+		})
 
 		imgsession.push(response.img_id);
+		current_proj.img.push({
+			id: response.img_id,
+			path: response.path,
+			tile: 0
+		});
 	},
 	
 	error: function(err, file) { alert("it didn't work. here's why, maybe: "+err) },
@@ -327,16 +372,7 @@ $('#proj_img').filedrop({
 		}
 	},
 
-	uploadStarted:function(i, file, len){
-		var preview = $('<div></div>')
-		var reader = new FileReader();
-		
-		reader.onload = function(e){ preview.css('background-image','url('+e.target.result+')'); };
-		reader.readAsDataURL(file);
-		preview.appendTo('#proj_img');
-		preview.append('<img src="../back/img/kill.png" class="img_kill" />')
-		$.data(file,preview);			
-	}	 
+	 
 });
 
 $('#drop').filedrop({
@@ -344,7 +380,7 @@ $('#drop').filedrop({
 	paramname:'covered',
 	
 	url: 'php/coversave.php',
-	maxfilesize: 20,
+	maxfilesize: 200,
 
 	data:{
 		cover: function(){

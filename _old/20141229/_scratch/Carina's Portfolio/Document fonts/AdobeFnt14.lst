@@ -1,0 +1,100 @@
+%!Adobe-FontList 1.14
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:STIXGeneral-Italic
+FamilyName:STIXGeneral
+StyleName:Italic
+MenuName:STIXGeneral
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:STIXGeneral Italic
+WritingScript:Roman
+OutlineFileName:\STIXGeneralItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+FileLength:170988
+FileModTime:1353204642
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:UniversLT-Condensed
+FamilyName:Univers LT
+StyleName:57 Condensed
+MenuName:Univers LT
+StyleBits:0
+WeightClass:400
+WidthClass:3
+AngleClass:0
+FullName:Univers LT 57 Condensed
+WritingScript:Roman
+OutlineFileName:\UniveLTCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:41707
+FileModTime:1027495816
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:UniversLT-Condensed
+OutlineFileName:\Univers LT 57 Condensed
+ResourceID:1257
+MacStyle:0
+FileLength:53790
+FileModTime:1029419755
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:UniversLT-CondensedOblique
+OutlineFileName:\Univers LT 57 Condensed
+ResourceID:1257
+MacStyle:2
+FileLength:53790
+FileModTime:1029419755
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:UniversLT-CondensedOblique
+OutlineFileName:\Univers LT 57 Condensed
+ResourceID:9978
+MacStyle:0
+FileLength:53790
+FileModTime:1029419755
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:UniversLTStd-Cn
+FamilyName:Univers LT Std
+StyleName:57 Condensed
+MenuName:Univers LT Std 57 Cn
+StyleBits:0
+WeightClass:400
+WidthClass:3
+AngleClass:0
+FullName:Univers LT Std 57 Condensed
+WritingScript:Roman
+OutlineFileName:\UniversLTStd-Cn.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:27400
+FileModTime:1052763519
+%EndFont
+

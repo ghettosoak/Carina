@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'u57';
   src: url("../type/_u57/UniversLTStd-Cn.eot");
@@ -88,8 +89,6 @@ body {
     left: -300%; }
   #master.lookingat_project #top .cat_nav {
     left: 0px; }
-    #master.lookingat_project #top .cat_nav div p {
-      display: none; }
   #master.lookingat_project.category-my_proj ::selection {
     color: white;
     background-color: #0d7e8d; }
@@ -164,7 +163,8 @@ body {
       left: 0px;
       cursor: pointer; }
     #top .put .alt_nav {
-      bottom: 24px; }
+      bottom: 24px;
+      right: 0; }
       #top .put .alt_nav p {
         text-align: center;
         font-size: 16px; }
@@ -196,6 +196,9 @@ body {
           text-align: center;
           font-family: stix;
           font-size: 16px; }
+          @media screen and (min-width: 1024px) {
+            #top .put .cat_nav div p {
+              bottom: 5px; } }
         #top .put .cat_nav div:nth-child(1) {
           background-color: #0d7e8d;
           color: #0d7e8d; }
@@ -214,6 +217,8 @@ body {
         #top .put .cat_nav div:nth-child(6) {
           background-color: #eccb24;
           color: #eccb24; }
+        #top .put .cat_nav div:hover p {
+          display: block !important; }
 
 #carousel {
   width: 400%;
@@ -234,11 +239,18 @@ body {
     display: block;
     width: 80%;
     height: auto; }
+  #carousel #interest .about_text {
+    white-space: pre-wrap;
+    padding: 0 20%; }
   #carousel #interest p {
     text-align: center;
     margin-top: 60px; }
     #carousel #interest p a {
       color: black; }
+  #carousel #interest .about_email a,
+  #carousel #interest .about_phone a,
+  #carousel #interest .about_cv a {
+    border-bottom: dotted 1px black; }
   #carousel #front > div {
     height: 300px;
     width: 100%;
@@ -261,51 +273,71 @@ body {
       #carousel #front > div .put p {
         position: absolute;
         left: 60%;
-        padding: 30px;
+        padding: 10px 30px;
         font-size: 24px;
-        cursor: pointer; }
+        cursor: pointer;
+        color: white; }
+        #carousel #front > div .put p:hover {
+          background-color: white !important; }
         #carousel #front > div .put p span {
-          color: white;
           font-family: stix; }
     #carousel #front > div .sec_color {
-      height: 16px;
+      height: 12px;
       width: 100%;
       position: absolute;
       top: 0px;
       z-index: 10; }
     #carousel #front > div#sec01 {
-      z-index: 1;
-      color: #0d7e8d; }
+      z-index: 1; }
+      #carousel #front > div#sec01 p {
+        background-color: #0d7e8d; }
+        #carousel #front > div#sec01 p:hover {
+          color: #0d7e8d !important; }
       #carousel #front > div#sec01 .sec_color {
         background-color: #0d7e8d; }
     #carousel #front > div#sec02 {
-      z-index: 2;
-      color: #730b40; }
+      z-index: 2; }
+      #carousel #front > div#sec02 p {
+        background-color: #730b40; }
+        #carousel #front > div#sec02 p:hover {
+          color: #730b40 !important; }
       #carousel #front > div#sec02 .sec_color {
         background-color: #730b40; }
     #carousel #front > div#sec03 {
-      z-index: 3;
-      color: #c02574; }
+      z-index: 3; }
+      #carousel #front > div#sec03 p {
+        background-color: #c02574; }
+        #carousel #front > div#sec03 p:hover {
+          color: #c02574 !important; }
       #carousel #front > div#sec03 .sec_color {
         background-color: #c02574; }
     #carousel #front > div#sec04 {
-      z-index: 4;
-      color: #106873; }
+      z-index: 4; }
+      #carousel #front > div#sec04 p {
+        background-color: #106873; }
+        #carousel #front > div#sec04 p:hover {
+          color: #106873 !important; }
       #carousel #front > div#sec04 .sec_color {
         background-color: #106873; }
     #carousel #front > div#sec05 {
-      z-index: 5;
-      color: #cbba3b; }
+      z-index: 5; }
+      #carousel #front > div#sec05 p {
+        background-color: #cbba3b; }
+        #carousel #front > div#sec05 p:hover {
+          color: #cbba3b !important; }
       #carousel #front > div#sec05 .sec_color {
         background-color: #cbba3b; }
     #carousel #front > div#sec06 {
-      z-index: 6;
-      color: #eccb24; }
+      z-index: 6; }
+      #carousel #front > div#sec06 p {
+        background-color: #eccb24; }
+        #carousel #front > div#sec06 p:hover {
+          color: #eccb24 !important; }
       #carousel #front > div#sec06 .sec_color {
         background-color: #eccb24; }
     #carousel #front > div.here .sec_color {
       position: fixed;
-      top: 200px; }
+      top: 188px; }
   #carousel #grid {
     padding-top: 290px; }
     #carousel #grid #grid_inside {
@@ -325,7 +357,7 @@ body {
           height: 100%;
           width: 100%;
           background-position: center center;
-          background-size: cover; }
+          background-size: auto 270%; }
           #carousel #grid #grid_inside > div > div > div {
             position: absolute;
             height: 80%;
@@ -347,33 +379,86 @@ body {
                 font-family: stix; }
   #carousel #project {
     padding-top: 290px; }
+    @media screen and (min-width: 768px) {
+      #carousel #project {
+        padding-top: 80px; } }
+    @media screen and (min-width: 1024px) {
+      #carousel #project {
+        padding-top: 40px; } }
     #carousel #project .proj_img {
       position: relative;
-      height: 200px;
-      width: 80%;
+      width: 66.666666%;
       margin: auto;
       overflow-x: hidden; }
+      #carousel #project .proj_img:before {
+        content: '';
+        position: relative;
+        padding-top: 65%;
+        width: 100%;
+        float: left; }
       #carousel #project .proj_img .proj_img_carousel {
         position: absolute;
         height: 100%;
         left: 0px;
-        -webkit-transition: all 0.25 ease-in-out;
-        -moz-transition: all 0.25 ease-in-out;
-        -o-transition: all 0.25 ease-in-out;
-        transition: all 0.25 ease-in-out; }
-        #carousel #project .proj_img .proj_img_carousel div {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+        #carousel #project .proj_img .proj_img_carousel > div {
           position: relative;
           float: left;
           height: 100%;
-          display: inline-block;
-          background-size: cover; }
+          display: none; }
+          #carousel #project .proj_img .proj_img_carousel > div > div {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center center; }
+        @media screen and (max-width: 767px) {
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_mobile_1x {
+            display: inline-block; } }
+        @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 767px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi), only screen and (max-width: 767px) and (min-resolution: 2dppx) {
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_mobile_1x {
+            display: none !important; }
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_mobile_2x {
+            display: inline-block; } }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_tablet_1x {
+            display: inline-block; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (max-width: 1023px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 768px) and (max-width: 1023px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 768px) and (max-width: 1023px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (max-width: 1023px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_tablet_1x {
+            display: none !important; }
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_tablet_2x {
+            display: inline-block; } }
+        @media screen and (min-width: 1024px) {
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_desktop_1x {
+            display: inline-block; } }
+        @media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_desktop_1x {
+            display: none !important; }
+          #carousel #project .proj_img .proj_img_carousel .proj_img_indiv_desktop_2x {
+            display: inline-block; } }
     #carousel #project .proj_img_select {
       position: relative;
       height: 6px;
-      width: 80%;
+      width: 66.666666%;
       margin: 0px auto 75px; }
+      #carousel #project .proj_img_select.proj_img_count_1 div {
+        width: 100%; }
+      #carousel #project .proj_img_select.proj_img_count_2 div {
+        width: 50%; }
+      #carousel #project .proj_img_select.proj_img_count_3 div {
+        width: 33.33333%; }
+      #carousel #project .proj_img_select.proj_img_count_4 div {
+        width: 25%; }
+      #carousel #project .proj_img_select.proj_img_count_5 div {
+        width: 20%; }
+      #carousel #project .proj_img_select.proj_img_count_6 div {
+        width: 16.66667%; }
       #carousel #project .proj_img_select div {
-        width: 16.66667%;
         height: 100%;
         position: relative;
         float: left;
@@ -407,19 +492,42 @@ body {
         #carousel #project .proj_img_select div:nth-child(6) {
           background-color: #eccb24;
           color: #eccb24; }
-        #carousel #project .proj_img_select div:hover {
+        #carousel #project .proj_img_select div:hover, #carousel #project .proj_img_select div.selected {
           height: 15px; }
     #carousel #project p {
-      text-align: center; }
-    #carousel #project .client {
+      text-align: center;
+      padding: 0 20%; }
+    #carousel #project .client, #carousel #project .contribution {
       font-family: stix;
       font-size: 16px;
       margin-bottom: 6px; }
+      .category-my_proj #carousel #project .client, .category-my_proj #carousel #project .contribution {
+        color: #0d7e8d; }
+      .category-posters #carousel #project .client, .category-posters #carousel #project .contribution {
+        color: #730b40; }
+      .category-logos #carousel #project .client, .category-logos #carousel #project .contribution {
+        color: #c02574; }
+      .category-publication #carousel #project .client, .category-publication #carousel #project .contribution {
+        color: #106873; }
+      .category-signage #carousel #project .client, .category-signage #carousel #project .contribution {
+        color: #cbba3b; }
+      .category-websites #carousel #project .client, .category-websites #carousel #project .contribution {
+        color: #eccb24; }
     #carousel #project .name {
       font-size: 22px;
       margin-bottom: 15px; }
-    #carousel #project .text {
+    #carousel #project .contribution {
       margin-bottom: 100px; }
+    #carousel #project .foot {
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 100%; }
+      #carousel #project .foot p {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 10px;
+        text-align: right;
+        font-size: 14px;
+        color: gray; }
 
 @media screen and (min-width: 768px) {
   #top {
@@ -433,7 +541,8 @@ body {
       height: 145px;
       width: 210px;
       left: 20px;
-      bottom: 20px; }
+      top: 20px;
+      position: relative; }
     #top .put .alt_nav {
       width: auto;
       right: 20px;
@@ -462,6 +571,8 @@ body {
       #top .put .cat_nav div:nth-child(6) {
         top: 50px;
         left: 66.666666%; }
+      #top .put .cat_nav div p {
+        display: none; }
 
   #carousel #front > div {
     height: 600px;
@@ -495,35 +606,37 @@ body {
             font-size: 16px;
             line-height: 18px; }
             #carousel #grid #grid_inside > div > div > div p span {
-              font-family: stix; }
-  #carousel #project {
-    padding-top: 80px; }
-    #carousel #project .proj_img {
-      height: 500px; } }
+              font-family: stix; } }
 @media screen and (min-width: 1024px) {
   #top {
     height: 200px;
     position: fixed;
     width: 100%;
     z-index: 100; }
-    #top .put #logo {
-      background-image: url(../img/logo.png);
-      background-size: 210px 145px;
-      background-repeat: no-repeat;
-      height: 145px;
-      width: 210px;
-      left: 20px;
-      bottom: 20px; }
-    #top .put .cat_nav {
-      left: 50%; }
-      #top .put .cat_nav div {
-        width: 16.66667%;
-        position: relative;
-        top: inherit !important;
-        left: inherit !important; }
+    #top .put {
+      max-width: 66.666666%; }
+      #top .put #logo {
+        background-image: url(../img/logo.png);
+        background-size: 210px 145px;
+        background-repeat: no-repeat;
+        height: 145px;
+        width: 210px;
+        left: 0;
+        top: 10px;
+        position: relative; }
+      #top .put .alt_nav {
+        right: 16.66667%; }
+      #top .put .cat_nav {
+        left: 50%; }
+        #top .put .cat_nav div {
+          width: 16.66667%;
+          position: relative;
+          top: inherit !important;
+          left: inherit !important; }
 
   #carousel {
-    overflow: initial; }
+    overflow: initial;
+    padding-top: 200px; }
     #carousel #grid {
       padding-top: 40px; }
       #carousel #grid #grid_inside {
@@ -535,8 +648,6 @@ body {
           cursor: pointer; }
           #carousel #grid #grid_inside > div:hover div > div {
             display: table; }
-    #carousel #project {
-      padding-top: 40px; }
     #carousel > div {
       height: 100%;
       overflow: scroll; } }

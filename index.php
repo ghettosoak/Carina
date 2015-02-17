@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Carina Stucki</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="css/master.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css?=v2" />
 </head>
 
 <body>
@@ -40,11 +40,12 @@
 				<p>HEY</p>
 			</div>
 			<div id="front" class="">
-				<div id="sec01">
+				<div id="sec01" class="here">
 					<div id="slide01" class="back" data-category="my_proj"></div>
 					<div class="put">
 						<p>»See more <span>My Projects</span></p>
 					</div>
+					<div class="sec_color"></div>
 				</div>
 
 				<div id="sec02">
@@ -95,7 +96,7 @@
 		</div>
 		
 	</div>
-<script type="text/javascript" src="js/master-m.js"></script>
+<script type="text/javascript" src="js/master-m.js?2"></script>
 </body>
 </html>
 

@@ -36,7 +36,7 @@ body{
 		#carousel{left:-300%;}
 		#top .cat_nav{
 			left:0px;
-			div p{display:none;}
+			// div p{display:none;}
 		}
 
 		&.category-my_proj{ @include select( white, $thelightgreen); 

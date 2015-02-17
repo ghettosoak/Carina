@@ -2,7 +2,7 @@
 include('help/delicious.php');
 
 $theaboutimg = mysql_query('select path from covers where id = 2');
-$theabouttext = mysql_query('select text from her');
+$theabouttext = mysql_query('select text, cv from her');
 
 $about = array();
 $about['about'] = array();
@@ -12,7 +12,8 @@ while ($anaboutimg = mysql_fetch_array($theaboutimg)){
 	while ($anabouttext = mysql_fetch_array($theabouttext)){
 		$about['about'][] = array(
 			"img" => $anaboutimg['path'], 
-			"text" => $anabouttext['text']
+			"text" => $anabouttext['text'],
+			"cv" => $anabouttext['cv'] 
 		);
 	}
 }

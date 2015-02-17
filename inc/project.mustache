@@ -2,14 +2,47 @@
 <div class="proj_img">
 	<div class="proj_img_carousel">
 	{{#img}}
-		<div style="background-image:url({{.}})"></div>
+	
+		<div class="proj_img_indiv proj_img_indiv_mobile_1x">
+			<div style="background-image:url({{.}}_mobile_1x.jpg)"></div>
+		</div>
+	
+		<div class="proj_img_indiv proj_img_indiv_mobile_2x">
+			<div style="background-image:url({{.}}_mobile_2x.jpg)"></div>
+		</div>
+	
+		<div class="proj_img_indiv proj_img_indiv_tablet_1x">
+			<div style="background-image:url({{.}}_tablet_1x.jpg)"></div>
+		</div>
+	
+		<div class="proj_img_indiv proj_img_indiv_tablet_2x">
+			<div style="background-image:url({{.}}_tablet_2x.jpg)"></div>
+		</div>
+	
+		<div class="proj_img_indiv proj_img_indiv_desktop_1x">
+			<div style="background-image:url({{.}}_desktop_1x.jpg)"></div>
+		</div>
+
+		<div class="proj_img_indiv proj_img_indiv_desktop_2x">
+			<div style="background-image:url({{.}}_desktop_2x.jpg)"></div>
+		</div>
 	{{/img}}
 	</div>
 </div>
-<div class="proj_img_select">
-	{{#img}}<div><p>{{@index}}</p></div>{{/img}}
+<div class="proj_img_select proj_img_count_{{ img.length }}">
+	{{#img}}
+		{{#if @first}}
+		<div class="selected"><p>{{@index}}</p></div>
+		{{else}}
+		<div><p>{{@index}}</p></div>
+		{{/if}}
+	{{/img}}
 </div>
-<p class="client">{{client}}</p>
+<p class="client">/&nbsp;&nbsp;&nbsp;{{client}}&nbsp;&nbsp;&nbsp;/</p>
 <p class="name">{{name}}</p>
 <p class="text">{{text}}</p>
+<p class="contribution">{{contrib}}</p>
+<div class="foot">
+	<p>&copy; CariFischer and former agencies 2015. All rights reserved.</p>
+</div>
 {{/project}}
