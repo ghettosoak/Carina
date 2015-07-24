@@ -85,6 +85,54 @@ body {
     left: -200%; }
   #master.lookingat_grid #top .cat_nav {
     left: 0px; }
+  #master.lookingat_grid.category-my_proj ::selection {
+    color: white;
+    background-color: #0d7e8d; }
+  #master.lookingat_grid.category-my_proj ::-moz-selection {
+    color: white;
+    background-color: #0d7e8d; }
+  #master.lookingat_grid.category-my_proj #top .cat_nav div:nth-child(1) p {
+    display: block !important; }
+  #master.lookingat_grid.category-posters ::selection {
+    color: white;
+    background-color: #730b40; }
+  #master.lookingat_grid.category-posters ::-moz-selection {
+    color: white;
+    background-color: #730b40; }
+  #master.lookingat_grid.category-posters #top .cat_nav div:nth-child(2) p {
+    display: block !important; }
+  #master.lookingat_grid.category-logos ::selection {
+    color: white;
+    background-color: #c02574; }
+  #master.lookingat_grid.category-logos ::-moz-selection {
+    color: white;
+    background-color: #c02574; }
+  #master.lookingat_grid.category-logos #top .cat_nav div:nth-child(3) p {
+    display: block !important; }
+  #master.lookingat_grid.category-publication ::selection {
+    color: white;
+    background-color: #106873; }
+  #master.lookingat_grid.category-publication ::-moz-selection {
+    color: white;
+    background-color: #106873; }
+  #master.lookingat_grid.category-publication #top .cat_nav div:nth-child(4) p {
+    display: block !important; }
+  #master.lookingat_grid.category-signage ::selection {
+    color: white;
+    background-color: #cbba3b; }
+  #master.lookingat_grid.category-signage ::-moz-selection {
+    color: white;
+    background-color: #cbba3b; }
+  #master.lookingat_grid.category-signage #top .cat_nav div:nth-child(5) p {
+    display: block !important; }
+  #master.lookingat_grid.category-websites ::selection {
+    color: black;
+    background-color: #eccb24; }
+  #master.lookingat_grid.category-websites ::-moz-selection {
+    color: black;
+    background-color: #eccb24; }
+  #master.lookingat_grid.category-websites #top .cat_nav div:nth-child(6) p {
+    display: block !important; }
   #master.lookingat_project #carousel {
     left: -300%; }
   #master.lookingat_project #top .cat_nav {
@@ -155,10 +203,10 @@ body {
       width: 100%; }
     #top .put #logo {
       background-image: url(../img/logo.png);
-      background-size: 150px auto;
+      background-size: 135px auto;
       background-repeat: no-repeat;
       background-position: center center;
-      height: 145px;
+      height: 135px;
       width: 100%;
       left: 0px;
       cursor: pointer; }
@@ -497,6 +545,9 @@ body {
     #carousel #project p {
       text-align: center;
       padding: 0 20%; }
+      @media screen and (min-width: 768px) {
+        #carousel #project p {
+          padding: 0 28%; } }
     #carousel #project .client, #carousel #project .contribution {
       font-family: stix;
       font-size: 16px;
@@ -536,9 +587,9 @@ body {
     z-index: 100; }
     #top .put #logo {
       background-image: url(../img/logo.png);
-      background-size: 210px 145px;
+      background-size: 135px 135px;
       background-repeat: no-repeat;
-      height: 145px;
+      height: 135px;
       width: 210px;
       left: 20px;
       top: 20px;
@@ -617,10 +668,10 @@ body {
       max-width: 66.666666%; }
       #top .put #logo {
         background-image: url(../img/logo.png);
-        background-size: 210px 145px;
+        background-size: 135px 135px;
         background-repeat: no-repeat;
-        height: 145px;
-        width: 210px;
+        height: 135px;
+        width: 135px;
         left: 0;
         top: 10px;
         position: relative; }

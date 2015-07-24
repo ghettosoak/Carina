@@ -7,6 +7,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Carina Stucki</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/master.css?=v2" />
 </head>

@@ -145,6 +145,10 @@
 	p{
 		text-align: center;
 		padding:0 20%;
+
+		@media screen and (min-width: 768px) {
+			padding: 0 28%;
+		}
 	}
 	
 	.client, .contribution{

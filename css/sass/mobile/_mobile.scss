@@ -30,6 +30,19 @@ body{
 	&.lookingat_grid{
 		#carousel{left:-200%;}
 		#top .cat_nav{ left:0px; }
+
+		&.category-my_proj{ @include select( white, $thelightgreen); 
+			#top .cat_nav div:nth-child(1) p{display:block !important;}}
+		&.category-posters{ @include select( white, $thedarkmagenta); 
+			#top .cat_nav div:nth-child(2) p{display:block !important;}}
+		&.category-logos{ @include select( white, $thelightmagenta); 
+			#top .cat_nav div:nth-child(3) p{display:block !important;}}
+		&.category-publication{ @include select( white, $thedarkgreen); 
+			#top .cat_nav div:nth-child(4) p{display:block !important;}}
+		&.category-signage{ @include select( white, $thedarkyellow); 
+			#top .cat_nav div:nth-child(5) p{display:block !important;}}
+		&.category-websites{ @include select( black, $thelightyellow); 
+			#top .cat_nav div:nth-child(6) p{display:block !important;}}
 	}
 
 	&.lookingat_project{
